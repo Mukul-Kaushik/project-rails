@@ -4,4 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          # FIXME: Correct hash format
+
+  def is_admin?
+    return admin 
+  end
+
 end

@@ -1,7 +1,4 @@
 <script>
-$(document).ready(function(){
-  
-});
 function toggleFilter(){
   $("#filter").slideToggle();
 }
@@ -56,16 +53,16 @@ function toggleFilter(){
           </tr>
         <% end %>
       </tbody>
-    </table>
+    </table>s
   </div>
   <br>
   <div class="text-center">
     <%= link_to 'Create', new_candidate_path,class:"btn btn-primary",style:"margin:10px;"%>
     <a class="btn btn-primary" id="fil" style="margin:10px;" onClick="toggleFilter()">Filter</a>
     <%if current_user && current_user.admin %>
-      
+    <%= link_to 'Admin Panel',rails_admin_path,class:"btn btn-primary",style:"margin:10px;" %>
     <%end %>
-    <%= link_to 'Download details',candidates_path(:format=>:xlsx,:query=> @qur),class:"btn btn-primary",style:"margin:10px;" %>
+    <%= link_to 'Download As Excelsheet',candidates_path(:format=>:xlsx),class:"btn btn-primary",style:"margin:10px;" %>
   </div>
 </body>
 <style>
