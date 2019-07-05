@@ -31944,3 +31944,1699 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_in" for ::1 at 2019-07-05 16:09:16 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 737ms (Views: 704.2ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-05 16:09:20 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wt/TgBqWwgtmqEdamltWQ0LcP3QC6XM96qQooHvYPMq0fQpyP095ts9goD2VUCHl2GqkJYz2/YNP9REjD3ZP4w==", "user"=>{"email"=>"mukul@kaushik", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mukul@kaushik"], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 245ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 16:09:20 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (19.5ms)
+  [1m[36mCandidate Load (1.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 246ms (Views: 234.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-05 16:09:24 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidates"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY "candidates"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (21.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (12.2ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.8ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (6.3ms)
+Completed 200 OK in 754ms (Views: 315.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-05 16:09:25 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidates"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.8ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY "candidates"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (20.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.1ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (14.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.3ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (6.7ms)
+Completed 200 OK in 279ms (Views: 261.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-05 16:09:33 +0530
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (3.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (2.7ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_datetime.html.haml (6.1ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_datetime.html.haml (1.1ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_boolean.html.haml (3.9ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_submit_buttons.html.haml (16.0ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (69.6ms)
+Completed 200 OK in 118ms (Views: 99.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/candidate?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-05 16:10:30 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"candidate"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY candidates.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (107.3ms)
+Completed 200 OK in 137ms (Views: 119.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/candidate?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-05 16:10:31 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"candidate"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY candidates.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (102.2ms)
+Completed 200 OK in 131ms (Views: 114.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/candidate?model_name=candidate&sort=date_of_registration&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-05 16:10:42 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"candidate", "sort"=>"date_of_registration", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY candidates.date_of_registration desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (86.8ms)
+Completed 200 OK in 115ms (Views: 98.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/candidate/2/edit?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-05 16:10:46 +0530
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"candidate", "id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 ORDER BY "candidates"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_datetime.html.haml (4.6ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_datetime.html.haml (1.8ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_text.html.haml (5.2ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (12.7ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_submit_buttons.html.haml (13.6ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (96.5ms)
+Completed 200 OK in 133ms (Views: 114.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/candidate/export?model_name=candidate&sort=date_of_registration" for ::1 at 2019-07-05 16:11:01 +0530
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"model_name"=>"candidate", "sort"=>"date_of_registration"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT ''::text AS str;[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application (42.1ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.9ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (15.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.7ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (9.8ms)
+Completed 200 OK in 263ms (Views: 246.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/candidate/export?all=true&model_name=candidate&sort=date_of_registration" for ::1 at 2019-07-05 16:11:19 +0530
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eXAZKBqcfpPpdHUDG9HcSF03VsmHJP0UJqoMyRylUGNzDrGv8d5LC9RlpIVEYUv9RvIJ0pxYw5Ybl1z2ZHAEBw==", "send_data"=>"true", "all"=>"true", "schema"=>{"only"=>["id", "date_of_registration", "date_of_closure", "address", "age", "branch", "contact_number", "email", "experience", "gender", "name", "qualification", "registration_number", "remarks", "specialization", "source_of_registration", "state", "status", "zone", "created_at", "updated_at"]}, "csv_options"=>{"encoding_to"=>"", "generator"=>{"col_sep"=>","}}, "return_to"=>"http://localhost:3000/admin/candidate?model_name=candidate&sort=date_of_registration", "_continue"=>"", "model_name"=>"candidate", "sort"=>"date_of_registration"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+Redirected to http://localhost:3000/admin/candidate?model_name=candidate&sort=date_of_registration
+Filter chain halted as :check_for_cancel rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/candidate?model_name=candidate&sort=date_of_registration" for ::1 at 2019-07-05 16:11:19 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"candidate", "sort"=>"date_of_registration"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY candidates.date_of_registration desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (83.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.9ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (10.2ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.9ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (11.6ms)
+Completed 200 OK in 315ms (Views: 302.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/candidate/export?model_name=candidate&sort=date_of_registration" for ::1 at 2019-07-05 16:11:28 +0530
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"model_name"=>"candidate", "sort"=>"date_of_registration"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT ''::text AS str;[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application (37.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.0ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (14.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.9ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (11.1ms)
+Completed 200 OK in 271ms (Views: 259.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 16:33:24 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 5.3ms)
+
+
+  
+SyntaxError (/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:66: syntax error, unexpected '<'
+    <%= link_to 'Download As Excel...
+    ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:66: syntax error, unexpected ')', expecting end
+...candidates_path(:format=>:xlsx),class:"btn btn-primary",styl...
+...                              ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:66: syntax error, unexpected ',', expecting end
+...:xlsx),class:"btn btn-primary",style:"margin:10px;" 
+...                              ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:84: syntax error, unexpected ensure, expecting end
+          ensure
+          ^~~~~~
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:86: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/candidates/index.html.erb:66: syntax error, unexpected '<'
+app/views/candidates/index.html.erb:66: syntax error, unexpected ')', expecting end
+app/views/candidates/index.html.erb:66: syntax error, unexpected ',', expecting end
+app/views/candidates/index.html.erb:84: syntax error, unexpected ensure, expecting end
+app/views/candidates/index.html.erb:86: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2019-07-05 16:34:41 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.2ms)
+
+
+  
+SyntaxError (/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected '<'
+    <%= link_to 'Download As Excel...
+    ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+...candidates_path(:format=>:xlsx),class:"btn btn-primary",styl...
+...                              ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+...:xlsx),class:"btn btn-primary",style:"margin:10px;" 
+...                              ^):
+  
+app/views/candidates/index.html.erb:67: syntax error, unexpected '<'
+app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+Started GET "/" for ::1 at 2019-07-05 16:35:12 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected '<'
+    <%= link_to 'Download As Excel...
+    ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+...candidates_path(:format=>:xlsx),class:"btn btn-primary",styl...
+...                              ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+...:xlsx),class:"btn btn-primary",style:"margin:10px;" 
+...                              ^):
+  
+app/views/candidates/index.html.erb:67: syntax error, unexpected '<'
+app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+Started GET "/" for ::1 at 2019-07-05 16:35:27 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected '<'
+    <%= link_to 'Download As Excel...
+    ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+...candidates_path(:format=>:xlsx),class:"btn btn-primary",styl...
+...                              ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+...:xlsx),class:"btn btn-primary",style:"margin:10px;" 
+...                              ^):
+  
+app/views/candidates/index.html.erb:67: syntax error, unexpected '<'
+app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+Started GET "/" for ::1 at 2019-07-05 16:35:49 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (22.1ms)
+  [1m[36mCandidate Load (0.8ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 650ms (Views: 641.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 16:40:53 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (21.6ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 98ms (Views: 93.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 16:41:06 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+Completed 406 Not Acceptable in 90ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UnknownFormat (CandidatesController#filter_result is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 16:42:27 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (19.2ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 165ms (Views: 128.6ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:42:32 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :query, :format
+Unpermitted parameters: :query, :format
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/candidates_controller.rb:36:in `block (2 levels) in filter_result'
+app/controllers/candidates_controller.rb:34:in `filter_result'
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:43:28 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :query, :format
+Unpermitted parameters: :query, :format
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 5.9ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/candidates_controller.rb:36:in `block (2 levels) in filter_result'
+app/controllers/candidates_controller.rb:34:in `filter_result'
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:44:28 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :query, :format
+Unpermitted parameters: :query, :format
+  Rendering candidates/index.xlsx.axlsx
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.xlsx.axlsx:5
+  Rendered candidates/index.xlsx.axlsx (214.3ms)
+Completed 200 OK in 249ms (Views: 217.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:50:17 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :query, :format
+Unpermitted parameters: :query, :format
+  Rendering candidates/index.xlsx.axlsx
+  [1m[36mCandidate Load (1.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.xlsx.axlsx:5
+  Rendered candidates/index.xlsx.axlsx (33.6ms)
+Completed 200 OK in 47ms (Views: 37.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 16:53:45 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (21.0ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 163ms (Views: 121.8ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:53:48 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :query, :format
+Unpermitted parameters: :query, :format
+  Rendering candidates/filter_result.xlsx.axlsx
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/filter_result.xlsx.axlsx:5
+  Rendered candidates/filter_result.xlsx.axlsx (16.2ms)
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 16:54:43 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+Completed 406 Not Acceptable in 110ms (ActiveRecord: 9.8ms)
+
+
+  
+ActionController::UnknownFormat (CandidatesController#filter_result is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-07-05 16:55:06 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (20.3ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 160ms (Views: 128.0ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/Filter_Result.xlsx" for ::1 at 2019-07-05 16:55:10 +0530
+Processing by CandidatesController#filter_result as XLSX
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :format
+Unpermitted parameter: :format
+  Rendering candidates/filter_result.xlsx.axlsx
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/filter_result.xlsx.axlsx:5
+  Rendered candidates/filter_result.xlsx.axlsx (73.2ms)
+Completed 200 OK in 85ms (Views: 77.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 16:56:21 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (21.2ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (71.7ms)
+Completed 200 OK in 174ms (Views: 133.4ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 16:56:37 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (30.6ms)
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 146ms (Views: 138.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:56:48 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :query, :format
+Unpermitted parameters: :query, :format
+  Rendering candidates/filter_result.xlsx.axlsx
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/filter_result.xlsx.axlsx:5
+  Rendered candidates/filter_result.xlsx.axlsx (23.1ms)
+Completed 200 OK in 38ms (Views: 30.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 16:58:26 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (26.1ms)
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:58:26 +0530
+  [1m[36mCandidate Load (1.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 195ms (Views: 149.3ms | ActiveRecord: 12.2ms)
+
+
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (7.5ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column candidates.query does not exist
+LINE 1: SELECT "candidates".* FROM "candidates" WHERE "candidates"."...
+                                                      ^
+: SELECT "candidates".* FROM "candidates" WHERE "candidates"."query" = $1 AND "candidates"."format" = $2 ORDER BY "candidates"."registration_number" ASC):
+    2: wb.add_worksheet(name: "Candidates") do |sheet|
+    3: style1 = sheet.styles.add_style(:bg_color => "EF0920", :fg_color => "FFFFFF", b:true)
+    4: sheet.add_row(["Registration No","Name","Age","Gender","Email","Contact No","Branch","Address","State","Status"], :style => style1)
+    5: @candidates.each do |candidate|
+    6:     sheet.add_row [candidate.registration_number,candidate.name,candidate.age,candidate.gender, candidate.email,candidate.contact_number,candidate.branch,candidate.address,candidate.state,candidate.status]
+    7: end
+    8: end
+  
+app/views/candidates/filter_result.xlsx.axlsx:5:in `block in _app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_49032040'
+app/views/candidates/filter_result.xlsx.axlsx:2:in `_app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_49032040'
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 16:59:54 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (5.6ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column candidates.query does not exist
+LINE 1: SELECT "candidates".* FROM "candidates" WHERE "candidates"."...
+                                                      ^
+: SELECT "candidates".* FROM "candidates" WHERE "candidates"."query" = $1 AND "candidates"."format" = $2 ORDER BY "candidates"."registration_number" ASC):
+    2: wb.add_worksheet(name: "Candidates") do |sheet|
+    3: style1 = sheet.styles.add_style(:bg_color => "EF0920", :fg_color => "FFFFFF", b:true)
+    4: sheet.add_row(["Registration No","Name","Age","Gender","Email","Contact No","Branch","Address","State","Status"], :style => style1)
+    5: @candidates.each do |candidate|
+    6:     sheet.add_row [candidate.registration_number,candidate.name,candidate.age,candidate.gender, candidate.email,candidate.contact_number,candidate.branch,candidate.address,candidate.state,candidate.status]
+    7: end
+    8: end
+  
+app/views/candidates/filter_result.xlsx.axlsx:5:in `block in _app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_69913720023880'
+app/views/candidates/filter_result.xlsx.axlsx:2:in `_app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_69913720023880'
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 17:00:22 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (5.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column candidates.query does not exist
+LINE 1: SELECT "candidates".* FROM "candidates" WHERE "candidates"."...
+                                                      ^
+: SELECT "candidates".* FROM "candidates" WHERE "candidates"."query" = $1 AND "candidates"."format" = $2 ORDER BY "candidates"."registration_number" ASC):
+    2: wb.add_worksheet(name: "Candidates") do |sheet|
+    3: style1 = sheet.styles.add_style(:bg_color => "EF0920", :fg_color => "FFFFFF", b:true)
+    4: sheet.add_row(["Registration No","Name","Age","Gender","Email","Contact No","Branch","Address","State","Status"], :style => style1)
+    5: @candidates.each do |candidate|
+    6:     sheet.add_row [candidate.registration_number,candidate.name,candidate.age,candidate.gender, candidate.email,candidate.contact_number,candidate.branch,candidate.address,candidate.state,candidate.status]
+    7: end
+    8: end
+  
+app/views/candidates/filter_result.xlsx.axlsx:5:in `block in _app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_69913658429840'
+app/views/candidates/filter_result.xlsx.axlsx:2:in `_app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_69913658429840'
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 17:05:45 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (5.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column candidates.query does not exist
+LINE 1: SELECT "candidates".* FROM "candidates" WHERE "candidates"."...
+                                                      ^
+: SELECT "candidates".* FROM "candidates" WHERE "candidates"."query" = $1 AND "candidates"."format" = $2 ORDER BY "candidates"."registration_number" ASC):
+    2: wb.add_worksheet(name: "Candidates") do |sheet|
+    3: style1 = sheet.styles.add_style(:bg_color => "EF0920", :fg_color => "FFFFFF", b:true)
+    4: sheet.add_row(["Registration No","Name","Age","Gender","Email","Contact No","Branch","Address","State","Status"], :style => style1)
+    5: @candidates.each do |candidate|
+    6:     sheet.add_row [candidate.registration_number,candidate.name,candidate.age,candidate.gender, candidate.email,candidate.contact_number,candidate.branch,candidate.address,candidate.state,candidate.status]
+    7: end
+    8: end
+  
+app/views/candidates/filter_result.xlsx.axlsx:5:in `block in _app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_69913720513300'
+app/views/candidates/filter_result.xlsx.axlsx:2:in `_app_views_candidates_filter_result_xlsx_axlsx__1963983470557717861_69913720513300'
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 17:09:20 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/filter_result.xlsx.axlsx
+  [1m[36mCandidate Load (1.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/filter_result.xlsx.axlsx:5
+  Rendered candidates/filter_result.xlsx.axlsx (41.4ms)
+Completed 200 OK in 76ms (Views: 43.7ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:09:41 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (27.9ms)
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 130ms (Views: 124.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:09:55 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (31.7ms)
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (60.4ms)
+Completed 200 OK in 145ms (Views: 138.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 17:10:03 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/filter_result.xlsx.axlsx
+  [1m[36mCandidate Load (0.8ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/filter_result.xlsx.axlsx:5
+  Rendered candidates/filter_result.xlsx.axlsx (16.5ms)
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:15:37 +0530
+Processing by CandidatesController#index as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-05 17:15:37 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 89ms (Views: 66.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-05 17:15:41 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NXNzPdjMFCH1p96A7imW04xHD9VZk7iVo7nA6BKnUO+p9hHK8ocOwrv6LNFgN1I/l118Vo+sM6RTB6cepdduUQ==", "user"=>{"email"=>"mukul@kaushik", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mukul@kaushik"], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 241ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:15:41 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (21.5ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 136ms (Views: 125.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:15:49 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (33.7ms)
+  Rendered candidates/index.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 139ms (Views: 131.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:20:48 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (19.4ms)
+  [1m[36mCandidate Load (1.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (75.9ms)
+Completed 200 OK in 664ms (Views: 619.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:21:00 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (35.0ms)
+  Rendered candidates/index.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 180ms (Views: 164.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 17:21:14 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (93.9ms)
+Completed 200 OK in 108ms (Views: 99.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/Filter_Result.xlsx" for ::1 at 2019-07-05 17:21:41 +0530
+Processing by CandidatesController#filter_result as XLSX
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (14.1ms)
+Completed 200 OK in 30ms (Views: 18.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:22:38 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (3.0ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (32.8ms)
+  Rendered candidates/index.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 161ms (Views: 149.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=Uttar+Pradesh&status=&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:22:56 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"Uttar Pradesh", "status"=>"", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."state" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["state", "Uttar Pradesh"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (31.5ms)
+  Rendered candidates/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 140ms (Views: 123.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22Uttar+Pradesh%22%2C+%22status%22%3D%3E%22%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 17:24:26 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"Uttar Pradesh\", \"status\"=>\"\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (10.3ms)
+Completed 200 OK in 24ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22Uttar+Pradesh%22%2C+%22status%22%3D%3E%22%22%2C+%22custom_day%22%3D%3E%22%22%7D" for ::1 at 2019-07-05 17:25:06 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"Uttar Pradesh\", \"status\"=>\"\", \"custom_day\"=>\"\"}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (26.2ms)
+Completed 200 OK in 43ms (Views: 34.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=Uttar+Pradesh&status=&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:27:03 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"Uttar Pradesh", "status"=>"", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."state" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["state", "Uttar Pradesh"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ation_number", type:"ASC" query: @filter_query),class:"btn b...
+...                          ^~~~~
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected tLABEL
+...C" query: @filter_query),class:"btn btn-primary",style:"marg...
+...                         ^~~~~~
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+...query),class:"btn btn-primary",style:"margin:10px;" );@outpu...
+...                              ^
+/home/shruti/mukul/mukul/projectrails/app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+...primary",style:"margin:10px;" );@output_buffer.safe_append='
+...                              ^):
+  
+app/views/candidates/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/candidates/index.html.erb:67: syntax error, unexpected tLABEL
+app/views/candidates/index.html.erb:67: syntax error, unexpected ',', expecting end
+app/views/candidates/index.html.erb:67: syntax error, unexpected ')', expecting end
+app/controllers/candidates_controller.rb:38:in `block (2 levels) in filter_result'
+app/controllers/candidates_controller.rb:37:in `filter_result'
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=Uttar+Pradesh&status=&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:28:47 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"Uttar Pradesh", "status"=>"", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  [1m[36mCandidate Load (1.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."state" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["state", "Uttar Pradesh"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (19.5ms)
+  Rendered candidates/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 184ms (Views: 120.3ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:29:03 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  [1m[36mCandidate Load (1.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (37.9ms)
+  Rendered candidates/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 138ms (Views: 126.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=registration_number&type=ASC" for ::1 at 2019-07-05 17:29:06 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (7.9ms)
+Completed 200 OK in 23ms (Views: 11.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/candidates/3/edit" for ::1 at 2019-07-05 17:30:06 +0530
+Processing by CandidatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:85
+  Rendering candidates/edit.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (33.9ms)
+  Rendered candidates/edit.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 93ms (Views: 85.8ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/candidates/3" for ::1 at 2019-07-05 17:30:09 +0530
+Processing by CandidatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dC7B7mb/FN3GmqzMD/0CoDSqMpVJgTxaXhahtCvn+Sk9EHrifurvYCODH7nOFddZcVCwctU9n+BCmZLCMCzqiA==", "candidate"=>{"date_of_registration(3i)"=>"5", "date_of_registration(2i)"=>"7", "date_of_registration(1i)"=>"2019", "name"=>"Shruti", "source_of_registration"=>"Select source of registration", "gender"=>"Select Gender", "age"=>"20", "branch"=>"", "email"=>"test@xyz.com", "contact_number"=>"7536817127", "address"=>"2/66 karyaveer Nagar Dayalbagh", "state"=>"Uttar Pradesh", "zone"=>"", "qualification"=>"", "specialization"=>"", "experience"=>"", "remarks"=>"5", "date_of_closure(3i)"=>"", "date_of_closure(2i)"=>"", "date_of_closure(1i)"=>"", "status"=>"Pending"}, "commit"=>"Update Candidate", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (3.2ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:85
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:63
+  [1m[36mCandidate Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "test@xyz.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[36mCACHE Candidate Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "test@xyz.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[36mCandidate Update (1.0ms)[0m  [1m[33mUPDATE "candidates" SET "registration_number" = $1, "updated_at" = $2 WHERE "candidates"."id" = $3[0m  [["registration_number", "NZ/Select source of registration/3"], ["updated_at", "2019-07-05 12:00:09.681670"], ["id", 3]]
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:64
+Redirected to http://localhost:3000/candidates/3
+Completed 302 Found in 34ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/candidates/3" for ::1 at 2019-07-05 17:30:09 +0530
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:85
+  Rendering candidates/show.html.erb within layouts/application
+  Rendered candidates/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 103ms (Views: 96.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-05 17:30:15 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (28.9ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 104ms (Views: 99.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidates/3/edit" for ::1 at 2019-07-05 17:30:20 +0530
+Processing by CandidatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:85
+  Rendering candidates/edit.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (14.9ms)
+  Rendered candidates/edit.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 88ms (Views: 82.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/candidates/3" for ::1 at 2019-07-05 17:30:27 +0530
+Processing by CandidatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x//BP7tZGpRN7dPI8ChTauw7qVEV6ynd+i9V4udqubyOwXozo0zhKaj0YL0xwIaTqcErtolXimfmoGaU/KGqHQ==", "candidate"=>{"date_of_registration(3i)"=>"5", "date_of_registration(2i)"=>"7", "date_of_registration(1i)"=>"2019", "name"=>"Shruti", "source_of_registration"=>"R", "gender"=>"Select Gender", "age"=>"20", "branch"=>"", "email"=>"test@xyz.com", "contact_number"=>"7536817127", "address"=>"2/66 karyaveer Nagar Dayalbagh", "state"=>"Uttar Pradesh", "zone"=>"", "qualification"=>"", "specialization"=>"", "experience"=>"", "remarks"=>"5", "date_of_closure(3i)"=>"", "date_of_closure(2i)"=>"", "date_of_closure(1i)"=>"", "status"=>"Pending"}, "commit"=>"Update Candidate", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:85
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:63
+  [1m[36mCandidate Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "test@xyz.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:63
+  [1m[36mCandidate Update (0.6ms)[0m  [1m[33mUPDATE "candidates" SET "source_of_registration" = $1, "updated_at" = $2 WHERE "candidates"."id" = $3[0m  [["source_of_registration", "R"], ["updated_at", "2019-07-05 12:00:27.772237"], ["id", 3]]
+  ↳ app/controllers/candidates_controller.rb:63
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:63
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[36mCandidate Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "test@xyz.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[36mCandidate Update (0.6ms)[0m  [1m[33mUPDATE "candidates" SET "registration_number" = $1, "updated_at" = $2 WHERE "candidates"."id" = $3[0m  [["registration_number", "NZ/R/3"], ["updated_at", "2019-07-05 12:00:27.789819"], ["id", 3]]
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:64
+Redirected to http://localhost:3000/candidates/3
+Completed 302 Found in 48ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/candidates/3" for ::1 at 2019-07-05 17:30:27 +0530
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:85
+  Rendering candidates/show.html.erb within layouts/application
+  Rendered candidates/show.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 116ms (Views: 105.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-05 17:30:30 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (28.8ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 112ms (Views: 107.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidates?sort=registration_number&type=ASC" for ::1 at 2019-07-05 17:31:30 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (29.2ms)
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 117ms (Views: 112.7ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-07-05 17:31:39 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CvSM6KPkrW6fPCcZxvzr9X9i1tHgQJZry4WloQMnTDJVJjSYxue+4zrJyx4yVItH+1RpNRdhJzjwuFiXJCLu6A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:31:39 +0530
+Processing by CandidatesController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-05 17:31:39 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-05 17:31:50 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q6L0bbfLXs9u7A26TxZzlDT1lZP4OaVg12mZ24byHqpe4H9H6UzCcwd8iu+P/AFwDTQ/CzJEyGltr48Te9N93g==", "user"=>{"email"=>"test@test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 243ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:31:51 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (23.1ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 104ms (Views: 99.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Filter_Result.xlsx?sort=registration_number&type=ASC" for ::1 at 2019-07-05 17:31:56 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/candidates_controller.rb:29:in `eval'
+app/controllers/candidates_controller.rb:29:in `filter_result'
+Started GET "/" for ::1 at 2019-07-05 17:35:55 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (23.2ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (42.6ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"candidates", :format=>:xlsx}, missing required keys: [:id]):
+    63:     <%= link_to 'Admin Panel',rails_admin_path,class:"btn btn-primary",style:"margin:10px;" %>
+    64:     <%end %>
+    65:     <%if @filter_query.nil? %>
+    66:     <%= link_to 'Download As Excelsheet',candidate_path(format: :xlsx),class:"btn btn-primary",style:"margin:10px;" %>
+    67:     
+    68:     <%= link_to 'Download As Filtered Excelsheet',filter_result_path(format: :xlsx, sort:"registration_number", type:"ASC", query: @filter_query),class:"btn btn-primary",style:"margin:10px;" %>
+    69:     <%end%>
+  
+app/views/candidates/index.html.erb:66:in `_app_views_candidates_index_html_erb__1374614121648455458_70184443967660'
+Started GET "/" for ::1 at 2019-07-05 17:36:09 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (22.6ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 106ms (Views: 98.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/candidates.xlsx" for ::1 at 2019-07-05 17:36:13 +0530
+Processing by CandidatesController#index as XLSX
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 406 Not Acceptable in 34ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UnknownFormat (CandidatesController#index is missing a template for this request format and variant.
+
+request.formats: ["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]
+request.variant: []):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-07-05 17:37:16 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (20.5ms)
+  [1m[36mCandidate Load (0.9ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 161ms (Views: 130.7ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/candidates.xlsx" for ::1 at 2019-07-05 17:37:20 +0530
+Processing by CandidatesController#index as XLSX
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/candidates_controller.rb:17:in `block (2 levels) in index'
+app/controllers/candidates_controller.rb:15:in `index'
+Started GET "/" for ::1 at 2019-07-05 17:37:45 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (18.7ms)
+  [1m[36mCandidate Load (0.9ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (97.5ms)
+Completed 200 OK in 184ms (Views: 152.0ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/candidates.xlsx" for ::1 at 2019-07-05 17:37:49 +0530
+Processing by CandidatesController#index as XLSX
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/filter_result.xlsx.axlsx
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/filter_result.xlsx.axlsx:5
+  Rendered candidates/filter_result.xlsx.axlsx (14.3ms)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:38:05 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  [1m[36mCandidate Load (0.8ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (32.9ms)
+  Rendered candidates/index.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 203ms (Views: 190.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:39:02 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  [1m[36mCandidate Load (1.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (25.8ms)
+  Rendered candidates/index.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 163ms (Views: 147.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=registration_number&type=ASC" for ::1 at 2019-07-05 17:39:04 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/filter_result.xlsx.axlsx
+  Rendered candidates/filter_result.xlsx.axlsx (10.6ms)
+Completed 200 OK in 25ms (Views: 15.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=registration_number&type=ASC" for ::1 at 2019-07-05 17:40:54 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.9ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.xlsx.axlsx
+  Rendered candidates/index.xlsx.axlsx (11.4ms)
+Completed 200 OK in 77ms (Views: 16.7ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/Filter_Result?utf8=%E2%9C%93&source_of_registration=&zone=&date_of_registration=&name=&branch=&state=&status=Pending&date_of_closure=&custom_day=&commit=Filter" for ::1 at 2019-07-05 17:41:05 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Pending", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :commit
+Unpermitted parameters: :utf8, :commit
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (22.7ms)
+  Rendered candidates/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 143ms (Views: 135.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Filter_Result.xlsx?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Pending%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=registration_number&type=ASC" for ::1 at 2019-07-05 17:41:09 +0530
+Processing by CandidatesController#filter_result as XLSX
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Pending\", \"custom_day\"=>\"\"}", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Pending"]]
+  ↳ app/controllers/candidates_controller.rb:34
+  Rendering candidates/index.xlsx.axlsx
+  Rendered candidates/index.xlsx.axlsx (10.7ms)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:41:20 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (32.2ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 116ms (Views: 110.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidates.xlsx" for ::1 at 2019-07-05 17:41:23 +0530
+Processing by CandidatesController#index as XLSX
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.xlsx.axlsx
+  [1m[36mCandidate Load (0.8ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.xlsx.axlsx:5
+  Rendered candidates/index.xlsx.axlsx (15.8ms)
+Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:42:45 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (26.0ms)
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 138ms (Views: 133.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-07-05 17:42:47 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ke+ZBQaCr75X+oxeJH1SArd53+QkfrPUw3euEes/ggmMxEoH+Me5urfZzuQ2Ol+9NgG6VKj5afcdsQzMBsGgYw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:42:47 +0530
+Processing by CandidatesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-05 17:42:47 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-05 17:42:54 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jLcArRsTECLk3sqzogL1EX4Q9Fx0O0veTXNNQGs9PSgxk6E2SQPJuRq2V6rRyhfPbMGs+yq7VTI24QDN5vTgwg==", "user"=>{"email"=>"mukul@kaushik", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mukul@kaushik"], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 238ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 17:42:54 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (20.9ms)
+  [1m[36mCandidate Load (1.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 117ms (Views: 112.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-05 17:43:03 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidates"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY "candidates"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (56.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (14.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.7ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (9.1ms)
+Completed 200 OK in 808ms (Views: 367.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-05 17:43:04 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidates"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY "candidates"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (30.3ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.2ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (16.8ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.2ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (9.2ms)
+Completed 200 OK in 268ms (Views: 248.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-05 17:43:18 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidates"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" ORDER BY "candidates"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (33.7ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.4ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (22.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.4ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (11.9ms)
+Completed 200 OK in 360ms (Views: 345.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-05 17:49:31 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:3
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/shruti/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (20.5ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.0ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (20.9ms)
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.6ms)
+  Rendering /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/shruti/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (10.6ms)
+Completed 200 OK in 1789ms (Views: 984.9ms | ActiveRecord: 9.1ms)
+
+

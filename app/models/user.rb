@@ -1,12 +1,13 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         # FIXME: Correct hash format
+  # FIXME: Correct hash format
 
   def is_admin?
-    return admin 
+    admin
   end
-
 end

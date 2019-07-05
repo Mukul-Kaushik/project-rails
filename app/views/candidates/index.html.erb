@@ -62,7 +62,11 @@ function toggleFilter(){
     <%if current_user && current_user.admin %>
     <%= link_to 'Admin Panel',rails_admin_path,class:"btn btn-primary",style:"margin:10px;" %>
     <%end %>
-    <%= link_to 'Download As Excelsheet',candidates_path(:format=>:xlsx),class:"btn btn-primary",style:"margin:10px;" %>
+    <%if @filter_query.nil? %>
+    <%= link_to 'Download As Excelsheet',candidates_path(format: :xlsx),class:"btn btn-primary",style:"margin:10px;" %>
+    <%else%>
+    <%= link_to 'Download As Filtered Excelsheet',filter_result_path(format: :xlsx, sort:"registration_number", type:"ASC", query: @filter_query),class:"btn btn-primary",style:"margin:10px;" %>
+    <%end%>
   </div>
 </body>
 <style>
