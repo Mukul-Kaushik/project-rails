@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_registration: 2019-07-04
+  date_of_closure: 2019-07-04
+  address: MyText
+  age: 1
+  branch: MyString
+  contact_number: MyString
+  email: MyString
+  experience: MyString
+  gender: MyString
+  name: MyString
+  qualification: MyString
+  registration_number: MyString
+  remarks: 1
+  specialization: MyString
+  source_of_registration: MyString
+  state: MyString
+  status: MyString
+  zone: MyString
+
+two:
+  date_of_registration: 2019-07-04
+  date_of_closure: 2019-07-04
+  address: MyText
+  age: 1
+  branch: MyString
+  contact_number: MyString
+  email: MyString
+  experience: MyString
+  gender: MyString
+  name: MyString
+  qualification: MyString
+  registration_number: MyString
+  remarks: 1
+  specialization: MyString
+  source_of_registration: MyString
+  state: MyString
+  status: MyString
+  zone: MyString

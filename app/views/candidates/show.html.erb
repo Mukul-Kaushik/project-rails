@@ -1,0 +1,108 @@
+<div class="" style="padding-top:60px">
+  <div class="text-center">
+    <h2>Read Candidate Details</h2>
+  </div>
+  <table class="table" >
+    <tbody>
+      <tr>
+        <td>
+          <%=label_tag "S.No"%>
+          <%=@candidate.id %>
+        </td>
+        <td>
+          <%=label_tag "Source of Registration" %> 
+          <%=@candidate.source_of_registration %>
+        </td>
+        <td>
+          <%=label_tag "Zone" %> 
+          <%=@candidate.zone%>
+        </td>
+        <td>
+          <%=label_tag "Date of registration" %> 
+          <%=@candidate.date_of_registration.strftime('%e %B %Y') %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%=label_tag "Registration number" %> 
+          <%=@candidate.registration_number %>
+        </td>
+        <td>
+          <%=label_tag "Name" %> 
+          <%=@candidate.name%>
+        </td>
+        <td>
+          <%=label_tag "Gender" %> 
+          <%=@candidate.gender %>
+        </td>
+        <td>
+          <%=label_tag "Age" %> 
+          <%=@candidate.age %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%=label_tag "Address" %> 
+          <%=@candidate.address %>
+        </td>
+        <td>
+          <%=label_tag "branch" %> 
+          <%=@candidate.branch %>
+        </td>
+        <td>
+          <%=label_tag "Email" %> 
+          <%=@candidate.email %>
+        </td>
+        <td>
+          <%=label_tag "Contact number" %> 
+          <%=@candidate.contact_number %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%=label_tag "State" %> 
+          <%=@candidate.state%>
+        </td>
+        <td>
+          <%=label_tag "Qualification" %> 
+          <%=@candidate.qualification%>
+        </td>
+        <td>
+          <%=label_tag "Specialization" %> 
+          <%=@candidate.specialization%>
+        </td>
+        <td>
+          <%=label_tag "Experience" %> 
+          <%=@candidate.experience %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%=label_tag "Remarks" %> 
+          <%=@candidate.remarks %>
+        </td>
+        <td>
+          <%=label_tag "Date of closure" %> 
+          <%begin%>
+          <%=@candidate.date_of_closure.strftime('%e %B %Y') %>
+          <%rescue%><%end%>
+          
+        </td>
+        <td>
+          <%=label_tag "Status" %> 
+          <%=@candidate.status %>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<div class="text-center">
+  <%= link_to 'Edit', edit_candidate_path(@candidate),class:"btn btn-default" %> |
+  <%= link_to 'Back', candidates_path ,class:"btn btn-default"%>
+</div>
+<style>
+  td{font-size:18px;}
+</style>

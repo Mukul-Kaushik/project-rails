@@ -1,0 +1,94 @@
+<div class="container" style="padding-top:20px">
+  <div class="contractForm">
+    <div class-"card">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+        <div class="text-center">
+          <h2> Edit Candidate Details</h2>
+        </div>
+          <%= form_with(model: candidate, local: true) do |form| %>
+            <% if candidate.errors.any? %>
+              <div class="alert alert-warning" >
+                <h2><%= pluralize(candidate.errors.count, "error") %> prohibited this candidate details from being saved.</h2>
+                <ul>
+                  <% candidate.errors.full_messages.each do |message| %>
+                    <li class="alert alert-danger"><%= message %></li>
+                  <% end %>
+                </ul>
+             </div>
+            <% end %>
+            <div class="form-group">
+              <span style="font-weight:bold;font-size:15px;">Date of Registration </span><br>
+              <%= form.date_select :date_of_registration , {order: [:day, :month, :year]}, { class: "datetime" }%>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :name,class: "form-control",placeholder: "Name" %>
+            </div>
+            <div class="form-group">
+              <%= form.select :source_of_registration ,["Select source of registration","R","KH"],{},{:class=> "form-control"}%>
+            </div>
+            <div class="form-group">
+              <%= form.select :gender ,["Select Gender","Male","Female"],{},{:class=> "form-control"}%>
+            </div>
+            <div class="form-group">
+              <%= form.number_field :age,class: "form-control",placeholder: "Age" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :branch,class: "form-control",placeholder: "Branch" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :email,class: "form-control",placeholder: "Email" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :contact_number,class: "form-control",placeholder: "Contact number",maxlength: "10" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_area :address ,class: "form-control",placeholder: "Address"%>
+            </div>
+            <div class="form-group">
+              <%= form.select :state, ["Select State","Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh",
+              "Chandigarh","Dadra and Nagar Haveli","Daman and Diu","Delhi","Goa",
+              "Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand",
+              "Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya",
+              "Mizoram","Nagaland","Orissa","Punjab","Pondicherry","Rajasthan","Sikkim",
+              "Tamil Nadu","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"],{},{:class=> "form-control"}%>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :zone,class: "form-control",placeholder: "Zone" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :qualification,class: "form-control",placeholder: "Qualification" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :specialization,class: "form-control",placeholder: "Specialization" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :experience,class: "form-control",placeholder: "Experience" %>
+            </div>
+            <div class="form-group">
+              <%= form.select :remarks,["Select Remarks",1,2,3,4,5,6,7,8,9,10] ,{},{:class=> "form-control"}%>
+            </div>
+            <div class="form-group">
+              <span style="font-weight:bold;font-size:15px;">Date of Closure </span><br>
+              <%= form.date_select :date_of_closure, {order: [:day, :month, :year],:include_blank=>true }, { class: "datetime" }%>
+            </div>
+            <div class="form-group">
+              <%= form.select :status,["Select status","Pending","Joined","Joining","Studying","Not interested","Not responding"],{},{:class=> "form-control"}%>
+            </div>
+            <div class="actions text-center">
+              <%= form.submit class:"btn btn-theme"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.datetime {
+  width: 116.5px;
+  height: 30px;
+  text-indent: 15px; 
+}
+</style>

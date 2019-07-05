@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_postgres
+  pool: 5
+  username: soami
+  password: soamic
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_postgres
+  pool: 5
+  username: soami
+  password: soamic
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_postgres
+  pool: 5
+  username: soami
+  password: soamic

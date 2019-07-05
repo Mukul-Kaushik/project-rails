@@ -1,0 +1,84 @@
+<script>
+$(document).ready(function(){
+  
+});
+function toggleFilter(){
+  $("#filter").slideToggle();
+}
+</script>
+<body style="padding-top:60px;">
+  <div class="filter_page">
+    <%= render "filter_menu"%>
+  </div>
+  <div class="text-center">
+    <h2>Candidate Details</h2>
+  </div>
+  <div class="table-responsive table-bordered">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Registration Number</th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"registration_number" , type:"ASC", query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"registration_number" , type:"DESC", query: @filter_query %></th>
+          <th>Name&nbsp;</th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"name" , type:"ASC",query: @filter_query  %><%= link_to sanitize("&#9660;"), sort:"name" , type:"DESC" , query: @filter_query%></th>
+          <th>State </th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"state" , type:"ASC",query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"state" , type:"DESC", query: @filter_query %></th>
+          <th>Branch&nbsp;</th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"branch" , type:"ASC",query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"branch" , type:"DESC", query: @filter_query %></th>
+          <th>Date of Registration</th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"date_of_registration" , type:"ASC",query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"date_of_registration" , type:"DESC", query: @filter_query %></th>
+          <th>Date of Closure</th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"date_of_closure" , type:"ASC",query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"date_of_closure" , type:"DESC", query: @filter_query %></th>
+          <th>Remarks&nbsp;</th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"remarks" , type:"ASC",query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"remarks" , type:"DESC", query: @filter_query %></th>
+          <th>Status&nbsp;</th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"status" , type:"ASC",query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"status" , type:"DESC", query: @filter_query %></th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @candidates.each do |candidate| %>
+          <tr>
+            <td colspan="2"><%= candidate.registration_number %></td>
+            <td colspan="2"><%= candidate.name %></td>
+            <td colspan="2"><%= candidate.state %></td>
+            <td colspan="2"><%= candidate.branch %></td>
+            <td colspan="2"><%= candidate.date_of_registration.strftime("%e %B %Y") %></td>
+            <%begin%>
+            <td colspan="2"><%= candidate.date_of_closure.strftime("%e %B %Y")%></td>
+            <%rescue%>
+            <%end%>
+            <td colspan="2"><%= candidate.remarks %></td>
+            <td colspan="2"><%= candidate.status %></td>
+            <td><%= link_to 'Read', candidate,class:"btn btn-primary" %></td>
+            <td><%= link_to 'Update', edit_candidate_path(candidate),class:"btn btn-info" %></td>
+            <td><%= link_to 'Delete', candidate, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-warning" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div class="text-center">
+    <%= link_to 'Create', new_candidate_path,class:"btn btn-primary",style:"margin:10px;"%>
+    <a class="btn btn-primary" id="fil" style="margin:10px;" onClick="toggleFilter()">Filter</a>
+    <%if current_user && current_user.admin %>
+      
+    <%end %>
+    <%= link_to 'Download details',candidates_path(:format=>:xlsx,:query=> @qur),class:"btn btn-primary",style:"margin:10px;" %>
+  </div>
+</body>
+<style>
+  td,th{font-size:15px;}
+  #sym{
+    text-indent:-1em;
+    width:35px;
+    height:10px;
+    min-width:40px;
+    font-weight:bold;
+    font-size:15px;
+  }
+  a{
+    font-color: #666;
+  }
+</style>

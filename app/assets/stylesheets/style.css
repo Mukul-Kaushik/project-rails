@@ -1,0 +1,263 @@
+/*
+    Theme Name: Bikin
+    Theme URL: https://bootstrapmade.com/bikin-free-simple-landing-page-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+*/
+
+/* ==== Google font ==== */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700,100);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+
+/* ==== overwrite bootstrap standard ==== */
+
+
+/*************************
+*******Typography******
+**************************/
+body {
+  background: #fff;
+  font-family:'Roboto', Arial, sans-serif;
+  color:#333;
+  line-height:1.6em;
+  overflow-x:hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight:500;
+    font-family:'Roboto';
+	color:#000;
+}
+
+h1{
+  font-size: 36px;
+  color:#fff;
+}
+
+h2{
+  font-size:20px;
+}
+
+h3{
+  font-size: 16px;
+  color: #787878;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+a {
+  color: #0BA9F9;
+  -webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition:  color 300ms, background-color 300ms;
+  transition:  color 300ms, background-color 300ms;
+}
+
+a:hover, a:focus {
+  color:rgba(0,0,0,.85);
+  text-decoration:none;
+}
+
+.btn-primary {
+	margin-top:30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  background-color: #0BA9F9;
+}
+.btn:hover {
+	color: #fff;
+	background-color: #0BA9F9;
+	border-color: #0BA9F9;
+}
+
+/*************************
+*******Header******
+**************************/
+.navbar-fixed-top .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar>.container .navbar-brand{
+  margin-left: 0;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin:0;
+}
+
+
+
+.navbar-header a.navbar-brand {
+   color:#fff;
+   font-family:'Roboto';
+}
+
+.navbar-header a.navbar-brand:hover{
+   color:#fff;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  background: #2bb8ff;
+  padding: 10px 0;
+  padding-bottom: 0;
+}
+
+
+
+.navbar-nav{
+  margin-top: 10px;
+ }
+
+ @media (max-width: 767px) {
+   .navbar-brand {
+     padding-left: 15px;
+   }
+
+   .navbar-header {
+     margin-top: -12px;
+   }
+
+   .navbar {
+     padding-bottom: 12px;
+   }
+
+ }
+
+.navbar-nav>li{
+  margin-left: 20px;
+  padding-bottom: 25px;
+}
+
+.navbar-fixed-top .navbar-nav > li > a {
+	padding: 2px 12px;
+	margin: 0;
+	border-radius: 3px;
+	color: #ffd;
+	line-height: 24px;
+	display: inline-block;
+	
+	font-weight:500;
+	font-size:18px;
+	font-family:'Roboto';
+}
+
+.navbar-fixed-top .navbar-nav > li > a:hover{
+	background: #0BA9F9;
+	color:#fff;
+}
+
+.navbar-fixed-top {
+  border: none;
+  background: #0BA9F9;
+}
+
+.navbar-fixed-top .navbar-brand {
+  font-size: 36px;
+  line-height: 50px;
+  color: #fff;
+}
+
+.navbar-fixed-top .navbar-nav > .active > a,
+.navbar-fixed-top .navbar-nav > .active > a:hover,
+.navbar-fixed-top .navbar-nav > .active > a:focus,
+.navbar-fixed-top .navbar-nav > .open > a,
+.navbar-fixed-top .navbar-nav > .open > a:hover,
+.navbar-fixed-top .navbar-nav > .open > a:focus {
+  background-color: #2bb8ff;
+  color: #fff;
+}
+
+/*************************
+*******Slider******
+**************************/
+
+
+.text-center i {
+	font-size:30px;
+	margin-top:50px;
+	margin-bottom:30px;
+	color:#fff;
+	padding:50px;
+	background:#0BA9F9;
+	border-radius:50%;
+}
+.text-center h2 {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.text-center h3 {
+	font-size:35px;
+	margin-top:50px;
+	margin-bottom:20px;
+	color:#111;
+}
+
+.text-center p {
+	margin-bottom:30px;
+}
+
+/*************************
+*******services******
+**************************/
+
+.validation {
+    color: red;
+    display:none;
+    margin: 0 0 20px;
+    font-weight:400;
+    font-size:13px;
+}
+
+#sendmessage {
+    color: green;
+    border:1px solid green;
+    display:none;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+#errormessage {
+    color: red;
+    display:none;
+    border:1px solid red;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+#sendmessage.show, #errormessage.show, .show {
+	display:block;
+}
