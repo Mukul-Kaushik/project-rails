@@ -33640,3 +33640,1426 @@ Processing by RailsAdmin::MainController#dashboard as HTML
 Completed 200 OK in 1789ms (Views: 984.9ms | ActiveRecord: 9.1ms)
 
 
+  [1m[35m (46.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (55.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "charansoami@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mukul@kaushik"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blazar@solution"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:6
+  [1m[36mUser Create (17.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "test@test"], ["encrypted_password", "$2a$11$TWM.JtWMZ75ccnSbGqjDf.q10e0ks6ogQQjVzH6QCuuChTEQJvq9q"], ["created_at", "2019-07-08 03:40:34.120113"], ["updated_at", "2019-07-08 03:40:34.120113"], ["admin", false]]
+  ↳ db/seeds.rb:6
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(416509702739292645)[0m
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (789.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(416509702739292645)[0m
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/blazar/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for ::1 at 2019-07-08 09:10:52 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CandidatesController#index as HTML
+Completed 401 Unauthorized in 58ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-08 09:10:52 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.6ms)
+Started GET "/users/sign_in" for ::1 at 2019-07-08 09:10:56 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6936ms (Views: 6935.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 10856ms (Views: 10834.3ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-08 09:11:21 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RqgSp29cjObOtSCTPBRqKxgAnpMNSaEadqjsX8V5djnATNT+R/yJzmPB9yZZpAKNCwUYEP4fPbxPXTB/rVdL3A==", "user"=>{"email"=>"charansoami@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "charansoami@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 187ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 09:11:21 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.6ms)
+  [1m[36mCandidate Load (65.8ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (163.7ms)
+Completed 200 OK in 193ms (Views: 112.8ms | ActiveRecord: 75.5ms)
+
+
+Started GET "/candidates/4/edit" for ::1 at 2019-07-08 09:11:27 +0530
+Processing by CandidatesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:86
+  Rendering candidates/edit.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (34.7ms)
+  Rendered candidates/edit.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 68ms (Views: 64.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/candidates/4" for ::1 at 2019-07-08 09:14:40 +0530
+Processing by CandidatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HVsKW0AHWoNblr+5kGCgb6LXNaNJC9Xj2k6YmwpifISUgjXq5XVr6SzuKkU56hy2vmsnfZfuWshX/b7SY8kK5w==", "candidate"=>{"date_of_registration(3i)"=>"1", "date_of_registration(2i)"=>"7", "date_of_registration(1i)"=>"2019", "name"=>"mukul", "source_of_registration"=>"KH", "gender"=>"Male", "age"=>"21", "branch"=>"Gurgaon", "email"=>"mukul@kaushik", "contact_number"=>"1234567890", "address"=>"IFFCO Chowk", "state"=>"Andhra Pradesh", "zone"=>"Gurgaon", "qualification"=>"B.Sc", "specialization"=>"CS", "experience"=>"0", "remarks"=>"10", "date_of_closure(3i)"=>"", "date_of_closure(2i)"=>"", "date_of_closure(1i)"=>"", "status"=>"Joined"}, "commit"=>"Update Candidate", "id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:86
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[36mCandidate Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "mukul@kaushik"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[36mCandidate Update (0.4ms)[0m  [1m[33mUPDATE "candidates" SET "address" = $1, "age" = $2, "branch" = $3, "contact_number" = $4, "email" = $5, "experience" = $6, "gender" = $7, "qualification" = $8, "remarks" = $9, "specialization" = $10, "zone" = $11, "date_of_registration" = $12, "date_of_closure" = $13, "updated_at" = $14 WHERE "candidates"."id" = $15[0m  [["address", "IFFCO Chowk"], ["age", 21], ["branch", "Gurgaon"], ["contact_number", "1234567890"], ["email", "mukul@kaushik"], ["experience", "0"], ["gender", "Male"], ["qualification", "B.Sc"], ["remarks", 10], ["specialization", "CS"], ["zone", "Gurgaon"], ["date_of_registration", "2019-07-01"], ["date_of_closure", nil], ["updated_at", "2019-07-08 03:44:40.845215"], ["id", 4]]
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:65
+  [1m[36mCandidate Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "mukul@kaushik"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:65
+Redirected to http://localhost:3000/candidates/4
+Completed 302 Found in 41ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/candidates/4" for ::1 at 2019-07-08 09:14:40 +0530
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:86
+  Rendering candidates/show.html.erb within layouts/application
+  Rendered candidates/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-08 09:14:44 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (16.2ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-08 09:15:04 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.6ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-08 09:15:08 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (15.0ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 81ms (Views: 72.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-08 09:15:53 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  [1m[35m (39.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (28.5ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.2ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (8.5ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.1ms)
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (3.7ms)
+Completed 200 OK in 1150ms (Views: 351.4ms | ActiveRecord: 40.3ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-08 09:15:55 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (11.9ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.9ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (15.1ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.2ms)
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (6.3ms)
+Completed 200 OK in 134ms (Views: 127.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:16:05 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (134.6ms)
+Completed 200 OK in 189ms (Views: 164.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:16:08 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (7.7ms)
+Completed 200 OK in 27ms (Views: 20.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:16:11 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (46.9ms)
+Completed 200 OK in 89ms (Views: 53.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:02 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (47.3ms)
+Completed 200 OK in 193ms (Views: 151.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/user/4/delete?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:15 +0530
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/_delete_notice.html.haml (6.6ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (37.0ms)
+Completed 200 OK in 95ms (Views: 76.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/admin/user/4/delete" for ::1 at 2019-07-08 09:18:17 +0530
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vjhdyOG7pG7YXWkmGVGHqeTxPVwKE8zJX91wzOqo6TXMhow1JK8H1tKhtPK2/yxsiqRBr+hsHd1joPaCmcIRKg==", "return_to"=>"http://localhost:3000/admin/user", "_continue"=>"", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/user
+Filter chain halted as :check_for_cancel rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user" for ::1 at 2019-07-08 09:18:17 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (34.0ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.1ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (6.9ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.5ms)
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (4.6ms)
+Completed 200 OK in 144ms (Views: 134.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:22 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (37.2ms)
+Completed 200 OK in 59ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:24 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (38.0ms)
+Completed 200 OK in 55ms (Views: 43.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:25 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (33.7ms)
+Completed 200 OK in 50ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:26 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (42.6ms)
+Completed 200 OK in 66ms (Views: 48.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:27 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (52.7ms)
+Completed 200 OK in 94ms (Views: 61.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:28 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (73.3ms)
+Completed 200 OK in 91ms (Views: 80.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:31 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (35.7ms)
+Completed 200 OK in 52ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:33 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (37.1ms)
+Completed 200 OK in 63ms (Views: 43.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:34 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (34.9ms)
+Completed 200 OK in 55ms (Views: 41.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user?model_name=user&sort=id&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:36 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"id", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (38.7ms)
+Completed 200 OK in 65ms (Views: 45.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/user?model_name=user&sort=id&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:18:37 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"id", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (35.1ms)
+Completed 200 OK in 50ms (Views: 41.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:20:56 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (36.6ms)
+Completed 200 OK in 55ms (Views: 43.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 09:20:56 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (35.5ms)
+Completed 200 OK in 51ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 09:30:48 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (9.6ms)
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 74ms (Views: 56.7ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/Filter_Result" for ::1 at 2019-07-08 09:30:56 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MeKa9/MdhSOpL/rln+0Ujab7ELY73YgE4gHR9wbNjvO3C8LGcW+ch0alRqXrENi4CAJNV+U1tCdHdn25U7CU8g==", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Joined", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.8ms)
+  Rendered candidates/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/Filter_Result" for ::1 at 2019-07-08 09:30:58 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/Filter_Result"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/Filter_Result" for ::1 at 2019-07-08 09:31:32 +0530
+  
+ArgumentError (Invalid route name, already in use: 'filter_result' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:11:in `block in <main>'
+config/routes.rb:3:in `<main>'
+Started GET "/Filter_Result" for ::1 at 2019-07-08 09:32:30 +0530
+Processing by CandidatesController#filter_result as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (10.2ms)
+  Rendered candidates/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 73ms (Views: 46.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email" for ::1 at 2019-07-08 09:32:34 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (39.7ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.4ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (6.7ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (1.9ms)
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (6.4ms)
+Completed 200 OK in 141ms (Views: 130.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/Filter_Result" for ::1 at 2019-07-08 09:32:39 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MeKa9/MdhSOpL/rln+0Ujab7ELY73YgE4gHR9wbNjvO3C8LGcW+ch0alRqXrENi4CAJNV+U1tCdHdn25U7CU8g==", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Joined", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.3ms)
+  Rendered candidates/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 59ms (Views: 47.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=ASC" for ::1 at 2019-07-08 09:32:44 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"ASC"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (3.0ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (16.4ms)
+  Rendered candidates/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 74ms (Views: 56.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=DESC" for ::1 at 2019-07-08 09:32:46 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"DESC"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.0ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (15.1ms)
+  Rendered candidates/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 63ms (Views: 51.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=ASC" for ::1 at 2019-07-08 09:32:47 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"ASC"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (49.9ms)
+  Rendered candidates/index.html.erb within layouts/application (69.8ms)
+Completed 200 OK in 130ms (Views: 106.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=DESC" for ::1 at 2019-07-08 09:32:48 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"DESC"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (15.2ms)
+  Rendered candidates/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 58ms (Views: 52.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=DESC" for ::1 at 2019-07-08 09:32:52 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"DESC"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (30.2ms)
+  Rendered candidates/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 110ms (Views: 90.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=ASC" for ::1 at 2019-07-08 09:32:53 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"ASC"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (52.4ms)
+  Rendered candidates/index.html.erb within layouts/application (77.5ms)
+Completed 200 OK in 146ms (Views: 117.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=DESC" for ::1 at 2019-07-08 09:32:54 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"DESC"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (9.9ms)
+  Rendered candidates/index.html.erb within layouts/application (127.0ms)
+Completed 200 OK in 185ms (Views: 165.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=ASC" for ::1 at 2019-07-08 09:32:55 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"ASC"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (34.3ms)
+  Rendered candidates/index.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 118ms (Views: 95.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=branch&type=DESC" for ::1 at 2019-07-08 09:32:56 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"branch", "type"=>"DESC"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.9ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (47.7ms)
+  Rendered candidates/index.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 139ms (Views: 114.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=state&type=DESC" for ::1 at 2019-07-08 09:32:57 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"state", "type"=>"DESC"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."state" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (13.5ms)
+  Rendered candidates/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/Filter_Result?query=%7B%22date_of_registration%22%3D%3E%22%22%2C+%22date_of_closure%22%3D%3E%22%22%2C+%22source_of_registration%22%3D%3E%22%22%2C+%22zone%22%3D%3E%22%22%2C+%22name%22%3D%3E%22%22%2C+%22branch%22%3D%3E%22%22%2C+%22state%22%3D%3E%22%22%2C+%22status%22%3D%3E%22Joined%22%2C+%22custom_day%22%3D%3E%22%22%7D&sort=state&type=ASC" for ::1 at 2019-07-08 09:32:58 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"date_of_registration\"=>\"\", \"date_of_closure\"=>\"\", \"source_of_registration\"=>\"\", \"zone\"=>\"\", \"name\"=>\"\", \"branch\"=>\"\", \"state\"=>\"\", \"status\"=>\"Joined\", \"custom_day\"=>\"\"}", "sort"=>"state", "type"=>"ASC"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."state" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (25.3ms)
+  Rendered candidates/index.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 87ms (Views: 70.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-08 09:36:41 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (47.9ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 117ms (Views: 105.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/candidates?method=post&sort=registration_number&type=ASC" for ::1 at 2019-07-08 09:36:44 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"method"=>"post", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (15.1ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 54ms (Views: 46.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidates?method=post&sort=registration_number&type=ASC" for ::1 at 2019-07-08 09:37:07 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"method"=>"post", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (47.1ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 132ms (Views: 107.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/candidates?method=post&sort=registration_number&type=ASC" for ::1 at 2019-07-08 09:37:18 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"method"=>"post", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/blazar/soami2/project-rails/app/views/candidates/index.html.erb:18: syntax error, unexpected ')', expecting =>
+...filter_query ,{method: :post });@output_buffer.append=( link...
+...                              ^
+/home/blazar/soami2/project-rails/app/views/candidates/index.html.erb:87: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/blazar/soami2/project-rails/app/views/candidates/index.html.erb:89: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/candidates/index.html.erb:18: syntax error, unexpected ')', expecting =>
+app/views/candidates/index.html.erb:87: syntax error, unexpected ensure, expecting ')'
+app/views/candidates/index.html.erb:89: syntax error, unexpected end, expecting ')'
+Started GET "/candidates?method=post&sort=registration_number&type=ASC" for ::1 at 2019-07-08 09:41:42 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"method"=>"post", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (10.6ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 67ms (Views: 51.9ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/Filter_Result" for ::1 at 2019-07-08 09:41:48 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBCWtZ/5MGBBMRTazFBYwjT0ZkjzwKP4vM4rb4f5jFb6+c6EHYspxK67qJq4rZT3mg07qS0on9sZuYch0oSWVw==", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Joined", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.0ms)
+  Rendered candidates/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=name&type=DESC" for ::1 at 2019-07-08 09:41:52 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"name", "type"=>"DESC"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."name" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (14.3ms)
+  Rendered candidates/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 66ms (Views: 56.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=registration_number&type=DESC" for ::1 at 2019-07-08 09:42:00 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"registration_number", "type"=>"DESC"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" DESC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (17.4ms)
+  Rendered candidates/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 66ms (Views: 51.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=registration_number&type=ASC" for ::1 at 2019-07-08 09:42:03 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.1ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (9.8ms)
+  Rendered candidates/index.html.erb within layouts/application (72.4ms)
+Completed 200 OK in 118ms (Views: 100.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=registration_number&type=ASC" for ::1 at 2019-07-08 09:42:04 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (24.1ms)
+  Rendered candidates/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 92ms (Views: 73.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=branch&type=ASC" for ::1 at 2019-07-08 09:42:07 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"branch", "type"=>"ASC"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.7ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (15.6ms)
+  Rendered candidates/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 68ms (Views: 55.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=branch&type=ASC" for ::1 at 2019-07-08 09:42:08 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"branch", "type"=>"ASC"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.1ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" ASC[0m  [["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (30.5ms)
+  Rendered candidates/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 93ms (Views: 79.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-08 09:46:14 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (14.8ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 66ms (Views: 55.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/Filter_Result" for ::1 at 2019-07-08 09:46:25 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rwXdFTvDYfSsNp90s/qyMR2Vs525mmbmiRzAbFTC9inWbV22uQvLYrXnxvUpImAaF5jBq1LThfc04Zza1IminQ==", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"soami", "branch"=>"", "state"=>"", "status"=>"Joined", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."name" = $1 AND "candidates"."status" = $2 ORDER BY "candidates"."registration_number" ASC[0m  [["name", "soami"], ["status", "Joined"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.9ms)
+  Rendered candidates/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 57ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Filter_Result" for ::1 at 2019-07-08 09:46:28 +0530
+Processing by CandidatesController#filter_result as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (12.6ms)
+  Rendered candidates/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/Filter_Result" for ::1 at 2019-07-08 09:46:30 +0530
+Processing by CandidatesController#filter_result as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.8ms)
+  Rendered candidates/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 59ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/Filter_Result" for ::1 at 2019-07-08 09:46:37 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lT6toaTeeJyjLxsaVIw7CZuhsfe6aw5E0YM1Q4y/l0oT1/WQJqxhOEylp1ogcfc8NVjsFmSDMmd09JkN2cKNSw==", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"soami", "branch"=>"", "state"=>"", "status"=>"", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mCandidate Load (2.0ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."name" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["name", "soami"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (24.5ms)
+  Rendered candidates/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 108ms (Views: 72.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/Filter_Result?query=%7B%22name%22%3D%3E%22soami%22%7D&sort=registration_number&type=DESC" for ::1 at 2019-07-08 09:46:43 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"name\"=>\"soami\"}", "sort"=>"registration_number", "type"=>"DESC"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."name" = $1 ORDER BY "candidates"."registration_number" DESC[0m  [["name", "soami"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.2ms)
+  Rendered candidates/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/Filter_Result?query=%7B%22name%22%3D%3E%22soami%22%7D&sort=registration_number&type=DESC" for ::1 at 2019-07-08 09:59:50 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"name\"=>\"soami\"}", "sort"=>"registration_number", "type"=>"DESC"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."name" = $1 ORDER BY "candidates"."registration_number" DESC[0m  [["name", "soami"]]
+  ↳ app/controllers/candidates_controller.rb:35
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (10.7ms)
+  Rendered candidates/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/candidates/new" for ::1 at 2019-07-08 09:59:52 +0530
+Processing by CandidatesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/new.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (6.1ms)
+  Rendered candidates/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidates/new" for ::1 at 2019-07-08 10:00:11 +0530
+Processing by CandidatesController#new as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/new.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (17.7ms)
+  Rendered candidates/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 79ms (Views: 68.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/candidates/new" for ::1 at 2019-07-08 10:00:24 +0530
+Processing by CandidatesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/new.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (10.3ms)
+  Rendered candidates/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 69ms (Views: 59.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/candidates/new" for ::1 at 2019-07-08 10:01:54 +0530
+Processing by CandidatesController#new as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/new.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (17.6ms)
+  Rendered candidates/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 90ms (Views: 74.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/candidates/new" for ::1 at 2019-07-08 10:01:56 +0530
+Processing by CandidatesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/new.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (6.8ms)
+  Rendered candidates/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidates/new" for ::1 at 2019-07-08 10:02:40 +0530
+Processing by CandidatesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/new.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (24.7ms)
+  Rendered candidates/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 99ms (Views: 91.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/candidates" for ::1 at 2019-07-08 10:02:45 +0530
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkCsiIuySdEIdhfOoN7BksCxMkksGxxFXLZJUOWVRtbAqfS5CcBQdef8q47UIw2nbkhvqPLzIGb5weUesOhc1w==", "candidate"=>{"date_of_registration(3i)"=>"8", "date_of_registration(2i)"=>"7", "date_of_registration(1i)"=>"2019", "name"=>"", "source_of_registration"=>"", "gender"=>"", "age"=>"", "branch"=>"", "email"=>"", "contact_number"=>"", "address"=>"", "state"=>"", "zone"=>"", "qualification"=>"", "specialization"=>"", "experience"=>"", "remarks"=>"", "date_of_closure(3i)"=>"", "date_of_closure(2i)"=>"", "date_of_closure(1i)"=>"", "status"=>""}, "commit"=>"Create Candidate"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:51
+  [1m[36mCandidate Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/candidates_controller.rb:51
+  Rendering candidates/new.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (11.9ms)
+  Rendered candidates/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 63ms (Views: 47.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-08 10:03:06 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (22.8ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 120ms (Views: 111.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-08 10:07:35 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (8.2ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.4ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (8.6ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.0ms)
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (3.4ms)
+Completed 200 OK in 113ms (Views: 99.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin" for ::1 at 2019-07-08 10:07:35 +0530
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (11.3ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.9ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_navigation.html.haml (7.4ms)
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.0ms)
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/layouts/rails_admin/pjax.html.haml (3.6ms)
+Completed 200 OK in 121ms (Views: 115.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:07:37 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (49.1ms)
+Completed 200 OK in 76ms (Views: 57.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:07:40 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (37.8ms)
+Completed 200 OK in 57ms (Views: 43.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:07:42 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (58.0ms)
+Completed 200 OK in 106ms (Views: 70.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:07:46 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (37.9ms)
+Completed 200 OK in 60ms (Views: 44.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:07:48 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (44.6ms)
+Completed 200 OK in 85ms (Views: 52.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:07:59 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (38.5ms)
+Completed 200 OK in 60ms (Views: 46.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:00 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (90.5ms)
+Completed 200 OK in 110ms (Views: 97.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:01 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (38.1ms)
+Completed 200 OK in 57ms (Views: 44.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:02 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (39.0ms)
+Completed 200 OK in 60ms (Views: 45.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:02 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (39.7ms)
+Completed 200 OK in 61ms (Views: 46.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:03 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (38.4ms)
+Completed 200 OK in 62ms (Views: 44.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:08 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (43.2ms)
+Completed 200 OK in 69ms (Views: 49.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:09 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (39.6ms)
+Completed 200 OK in 63ms (Views: 46.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:10 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (45.4ms)
+Completed 200 OK in 100ms (Views: 54.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:11 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (38.5ms)
+Completed 200 OK in 61ms (Views: 44.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:11 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (79.2ms)
+Completed 200 OK in 99ms (Views: 84.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/user?model_name=user&sort=email&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2019-07-08 10:08:13 +0530
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "sort"=>"email", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:5
+  Rendering /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.email desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /home/blazar/.rvm/gems/ruby-2.6.3/gems/rails_admin-2.0.0.beta/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (39.9ms)
+Completed 200 OK in 59ms (Views: 47.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:08:43 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (14.0ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 74ms (Views: 63.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/candidates/5" for ::1 at 2019-07-08 10:09:04 +0530
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.2ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:83
+  Rendering candidates/show.html.erb within layouts/application
+  Rendered candidates/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidates/5/edit" for ::1 at 2019-07-08 10:09:09 +0530
+Processing by CandidatesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.1ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:83
+  Rendering candidates/edit.html.erb within layouts/application
+  Rendered candidates/_form.html.erb (8.3ms)
+  Rendered candidates/edit.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 55ms (Views: 45.8ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/candidates/5" for ::1 at 2019-07-08 10:10:31 +0530
+Processing by CandidatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QgBYieNhjdzbc/mU3kEx4x2dBRBZmip3esU8aXUfmNAMBzS2XilGNN6l/u+yWz3Taj/3at0GAv4PTsW3wNrUQA==", "candidate"=>{"date_of_registration(3i)"=>"1", "date_of_registration(2i)"=>"6", "date_of_registration(1i)"=>"2018", "name"=>"soami charan", "source_of_registration"=>"R", "gender"=>"Male", "age"=>"20", "branch"=>"Dwarka", "email"=>"soami@charan", "contact_number"=>"1231231231", "address"=>"New Palam Vihar", "state"=>"Madhya Pradesh", "zone"=>"gurgaon", "qualification"=>"B.Sc", "specialization"=>"CS", "experience"=>"0", "remarks"=>"10", "date_of_closure(3i)"=>"", "date_of_closure(2i)"=>"", "date_of_closure(1i)"=>"", "status"=>"Joined"}, "commit"=>"Update Candidate", "id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (1.1ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:83
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:61
+  [1m[36mCandidate Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "soami@charan"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:61
+  [1m[36mCandidate Update (1.4ms)[0m  [1m[33mUPDATE "candidates" SET "address" = $1, "age" = $2, "branch" = $3, "contact_number" = $4, "email" = $5, "experience" = $6, "gender" = $7, "name" = $8, "qualification" = $9, "remarks" = $10, "specialization" = $11, "zone" = $12, "date_of_registration" = $13, "date_of_closure" = $14, "updated_at" = $15 WHERE "candidates"."id" = $16[0m  [["address", "New Palam Vihar"], ["age", 20], ["branch", "Dwarka"], ["contact_number", "1231231231"], ["email", "soami@charan"], ["experience", "0"], ["gender", "Male"], ["name", "soami charan"], ["qualification", "B.Sc"], ["remarks", 10], ["specialization", "CS"], ["zone", "gurgaon"], ["date_of_registration", "2018-06-01"], ["date_of_closure", nil], ["updated_at", "2019-07-08 04:40:31.275257"], ["id", 5]]
+  ↳ app/controllers/candidates_controller.rb:61
+  [1m[35m (29.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/candidates_controller.rb:62
+  [1m[36mCandidate Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "candidates" WHERE "candidates"."email" = $1 AND "candidates"."id" != $2 LIMIT $3[0m  [["email", "soami@charan"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/candidates_controller.rb:62
+Redirected to http://localhost:3000/candidates/5
+Completed 302 Found in 69ms (ActiveRecord: 37.0ms)
+
+
+Started GET "/candidates/5" for ::1 at 2019-07-08 10:10:31 +0530
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT  "candidates".* FROM "candidates" WHERE "candidates"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/candidates_controller.rb:83
+  Rendering candidates/show.html.erb within layouts/application
+  Rendered candidates/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidates" for ::1 at 2019-07-08 10:10:34 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (13.5ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidates?sort=registration_number&type=DESC" for ::1 at 2019-07-08 10:10:39 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"sort"=>"registration_number", "type"=>"DESC"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (28.0ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" DESC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 95ms (Views: 84.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/candidates?sort=registration_number&type=DESC" for ::1 at 2019-07-08 10:10:40 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"sort"=>"registration_number", "type"=>"DESC"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (51.7ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" DESC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 123ms (Views: 111.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/candidates?sort=registration_number&type=ASC" for ::1 at 2019-07-08 10:10:42 +0530
+Processing by CandidatesController#index as HTML
+  Parameters: {"sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (36.9ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 111ms (Views: 96.2ms | ActiveRecord: 1.2ms)
+
+

@@ -26,14 +26,11 @@ class CandidatesController < ApplicationController
 
   def filter_result
     if params[:sort].nil?
-      @filter_query = filter_params.to_s
+      @filter_query = filter_params.delete_if{|key, value| value.blank?}.to_s
       @candidates = Candidate.filter_records(filter_params)
     else
       @filter_query = params[:query]
       @candidates = Candidate.filter_records(eval(params[:query]), params[:sort], params[:type])
-    end
-    @candidates.each do |candidate|
-      print candidate.name
     end
     respond_to do |format|
       format.html { render :index }

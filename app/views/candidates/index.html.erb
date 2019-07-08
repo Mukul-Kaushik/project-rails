@@ -15,7 +15,7 @@ function toggleFilter(){
       <thead>
         <tr>
           <th>Registration Number</th>
-          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"registration_number" , type:"ASC", query: @filter_query  %><%= link_to sanitize(" &#9660;"), sort:"registration_number" , type:"DESC", query: @filter_query %></th>
+          <th id="sym"><%= link_to sanitize("&#9650;"), sort:"registration_number" , type:"ASC", query: @filter_query %><%= link_to sanitize(" &#9660;"), sort:"registration_number" , type:"DESC", query: @filter_query %></th>
           <th>Name&nbsp;</th>
           <th id="sym"><%= link_to sanitize("&#9650;"), sort:"name" , type:"ASC",query: @filter_query  %><%= link_to sanitize("&#9660;"), sort:"name" , type:"DESC" , query: @filter_query%></th>
           <th>State </th>
