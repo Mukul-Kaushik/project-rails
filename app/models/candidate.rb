@@ -43,22 +43,24 @@ class Candidate < ApplicationRecord
   def self.filter_records(filter_params, sort_field = 'registration_number', sort_type = 'ASC')
     filter_result = Candidate.all
     filter_params.each do |field, value|
-      if field == 'date_of_registration' || field == 'date_of_closure'
+      case field
+      when 'date_of_registration', 'date_of_closure'
         unless value.blank?
           start_date, end_date = value.split(' - ')
           filter_result = filter_result.where("#{field} BETWEEN ? AND ?", start_date, end_date)
-          end
-      elsif field == 'custom_day'
+        end
+      when 'custom_day'
         unless value.blank?
           current_date = Date.today
-          if value == 'Greater than 365 days'
+          case value
+          when 'Greater than 365 days'
             required_date = current_date - 365
             filter_result = filter_result.where('date_of_registration < ?', required_date)
-          elsif value == 'Between 180 to 365 days'
+          when 'Between 180 to 365 days'
             start_date = current_date - 365
             end_date = current_date - 180
             filter_result = filter_result.where('date_of_registration BETWEEN ? AND ?', start_date, end_date)
-          elsif value == 'Between 60 to 180 days'
+          when 'Between 60 to 180 days'
             start_date = current_date - 180
             end_date = current_date - 60
             filter_result = filter_result.where('date_of_registration BETWEEN ? AND ?', start_date, end_date)
@@ -66,11 +68,11 @@ class Candidate < ApplicationRecord
             required_date = current_date - 60
             filter_result = filter_result.where('date_of_registration >= ?', required_date)
           end
-          end
+        end
       else
         unless value.blank?
           filter_result = filter_result.where("#{field}": value.to_s)
-          end
+        end
       end
     end
     filter_result = if sort_type == 'ASC'
