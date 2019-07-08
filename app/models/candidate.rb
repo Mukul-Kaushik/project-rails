@@ -7,13 +7,12 @@ class Candidate < ApplicationRecord
   validates :gender, presence: { message: 'must specified.' }
   validates :age, presence: { message: 'must specified.' }
   validates :status, presence: { message: 'Status must specified'}
-  validates :age, inclusion: { in: 18..60, message: 'must between 1 to 100' }
+  validates :age, inclusion: { in: 1..100, message: 'must between 1 to 100' }
   validates :email, presence: { message: 'is required.' },
                     uniqueness: { message: 'is already exist.' },
                     format: { with: /@/, message: 'must contain @.' }
   validates :contact_number, presence: {message: 'Contact number must present'},
-                    numericality: { message: 'must be numeric'},
-                    length: { is: 10, message: 'length must be 10 digits'}
+                    numericality: { message: 'must be numeric'}
   validates :date_of_registration, presence: {mesage: 'must be specified'}
   validate :check_date_of_registration
 

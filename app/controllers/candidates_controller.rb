@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class CandidatesController < ApplicationController
   before_action :set_candidate, only: %i[show edit update destroy]
   # TODO: move to application controller
@@ -9,11 +8,7 @@ class CandidatesController < ApplicationController
   def index
     # TODO: Move business logic to model
     # TODO: know about all the callbacks
-    @candidates = if params[:sort].nil?
-                    Candidate.all
-                  else
-                    Candidate.sort(params[:sort], params[:type])
-                  end
+    @candidates = params[:sort].nil? ? Candidate.all : Candidate.sort(params[:sort], params[:type])
     respond_to do |format|
       format.html
       format.xlsx { response.headers['Content-Disposition'] = 'attachment; filename="candidates.xlsx"' }
