@@ -1,14 +1,29 @@
 # frozen_string_literal: true
 
 class Candidate < ApplicationRecord
-  validates :source_of_registration, presence: { message: 'Source of registration must specified' }
+  
+  validates :source_of_registration, inclusion: { in: ['R', 'KH'], message: 'Must be selected' }
   validates :name, presence: { message: 'must specified.' }
   validates :gender, presence: { message: 'must specified.' }
   validates :age, presence: { message: 'must specified.' }
-  validates :age, inclusion: { in: 1..100, message: 'must between 1 to 100' }
+  validates :status, presence: { message: 'Status must specified'}
+  validates :age, inclusion: { in: 18..60, message: 'must between 1 to 100' }
   validates :email, presence: { message: 'is required.' },
                     uniqueness: { message: 'is already exist.' },
                     format: { with: /@/, message: 'must contain @.' }
+  validates :contact_number, presence: {message: 'Contact number must present'},
+                    numericality: { message: 'must be numeric'},
+                    length: { is: 10, message: 'length must be 10 digits'}
+  validates :date_of_registration, presence: {mesage: 'must be specified'}
+  validate :check_date_of_registration
+
+  def check_date_of_registration
+    unless date_of_closure.blank?
+      if date_of_registration >= date_of_closure
+        errors.add(:date_of_registration,'must be less than Date of Closure')
+      end
+    end
+  end
 
   # TODO: change name to a short name
   # FIXME: Add a space before and after {}
