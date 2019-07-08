@@ -35063,3 +35063,193 @@ Processing by CandidatesController#index as HTML
 Completed 200 OK in 111ms (Views: 96.2ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/candidates?sort=registration_number&type=ASC" for ::1 at 2019-07-08 10:14:08 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CandidatesController#index as HTML
+  Parameters: {"sort"=>"registration_number", "type"=>"ASC"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (10.6ms)
+  [1m[36mCandidate Load (0.5ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" ORDER BY "candidates"."registration_number" ASC[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 387ms (Views: 365.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:16:19 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (13.3ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 61ms (Views: 55.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:18:43 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (18.9ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:18:51 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (12.0ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:18:53 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.7ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:18:58 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (12.2ms)
+  [1m[36mCandidate Load (0.6ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:19:00 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (17.2ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 91ms (Views: 85.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:19:04 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (17.5ms)
+  [1m[36mCandidate Load (0.9ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:19:10 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (15.3ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:20:28 +0530
+Processing by CandidatesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (18.4ms)
+  [1m[36mCandidate Load (0.3ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates"[0m
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 81ms (Views: 72.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/Filter_Result" for ::1 at 2019-07-08 10:20:45 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jW/Ki6owxvAgvTCK3DwWsqbgGC9Jkr8+uT+NvLefDrALhpK6KELfVM83jMqowdqHCBlFzpd6gx0cSCHy4uIUsQ==", "source_of_registration"=>"", "zone"=>"", "date_of_registration"=>"", "name"=>"", "branch"=>"", "state"=>"", "status"=>"Joined", "date_of_closure"=>"", "custom_day"=>"", "commit"=>"Filter"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (11.1ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."registration_number" ASC[0m  [["status", "Joined"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=date_of_registration&type=ASC" for ::1 at 2019-07-08 10:21:00 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"date_of_registration", "type"=>"ASC"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (14.1ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."date_of_registration" ASC[0m  [["status", "Joined"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 61ms (Views: 57.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/Filter_Result?query=%7B%22status%22%3D%3E%22Joined%22%7D&sort=branch&type=DESC" for ::1 at 2019-07-08 10:21:01 +0530
+Processing by CandidatesController#filter_result as HTML
+  Parameters: {"query"=>"{\"status\"=>\"Joined\"}", "sort"=>"branch", "type"=>"DESC"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering candidates/index.html.erb within layouts/application
+  Rendered candidates/_filter_menu.html.erb (19.3ms)
+  [1m[36mCandidate Load (0.4ms)[0m  [1m[34mSELECT "candidates".* FROM "candidates" WHERE "candidates"."status" = $1 ORDER BY "candidates"."branch" DESC[0m  [["status", "Joined"]]
+  ↳ app/views/candidates/index.html.erb:37
+  Rendered candidates/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 86ms (Views: 79.0ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-07-08 10:25:17 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uXt/wuMSpgO/S/kmtf9kYd7nXZgqdeNghxOuSgPxcmg/kifzYWC/p1DBRWbBAqhUcB4AefSd30MiZAIEVoxoaQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/blazar/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 10:25:18 +0530
+Processing by CandidatesController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-08 10:25:18 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
