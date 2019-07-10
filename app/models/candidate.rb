@@ -56,7 +56,7 @@ class Candidate < ApplicationRecord
       case field
       when 'date_of_registration', 'date_of_closure'
         st_date, en_date = value.split(' - ')
-        filter_result = filter_result.where("#{field} BETWEEN ? AND ?",st_date,en_date)
+        filter_result = filter_result.where("#{field} BETWEEN ? AND ?", st_date, en_date)
       when 'custom_day'
         filter_result = filter_custom_days(filter_result, value, Date.today)
       else

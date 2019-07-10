@@ -51,7 +51,7 @@ class CandidatesController < ApplicationController
     @candidate = Candidate.new(candidate_params)
     respond_to do |format|
       if @candidate.save
-        Candidate.update_source(@candidate.source_of_registration,@candidate.id)
+        Candidate.update_source(@candidate.source_of_registration, @candidate.id)
         format.html { redirect_to @candidate }
       else
         format.html { render :new }
@@ -62,7 +62,7 @@ class CandidatesController < ApplicationController
   def update
     respond_to do |format|
       if @candidate.update(candidate_params)
-        Candidate.update_source(@candidate.source_of_registration,@candidate.id)
+        Candidate.update_source(@candidate.source_of_registration, @candidate.id)
         format.html { redirect_to @candidate }
       else
         format.html { render :edit }
@@ -85,14 +85,12 @@ class CandidatesController < ApplicationController
   end
 
   def candidate_params
-    params.require(:candidate).permit(
-      :date_of_registration, :date_of_closure,
-                                      :address, :age, :branch, :contact_number,
-                                      :email, :experience, :gender, :name,
-                                      :qualification, :registration_number,
-                                      :remarks, :specialization,
-                                      :source_of_registration, :state,
-                                      :status, :zone)
+    params.require(:candidate).permit(:date_of_registration,
+                                      :date_of_closure, :address, :age, :branch,
+                                      :contact_number, :email, :experience, :gender,
+                                      :name, :qualification, :registration_number,
+                                      :remarks, :specialization, :source_of_registration,
+                                      :state, :status, :zone)
   end
 
   def filter_params
@@ -100,5 +98,4 @@ class CandidatesController < ApplicationController
                   :source_of_registration, :zone, :name, :branch,
                   :state, :status, :custom_day, :query, :format, :type)
   end
-
 end
