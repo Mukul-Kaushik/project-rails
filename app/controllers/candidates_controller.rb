@@ -11,11 +11,10 @@ class CandidatesController < ApplicationController
   # TODO: Move business logic to model
   # TODO: know about all the callbacks
   def index
-    #@page = (params[:page] || 0).to_i
     @candidates = if params[:sort].nil?
                     Candidate.page(params[:page]).per(2)
                   else
-                    Candidate.sort(@page, params[:sort], params[:type])
+                    Candidate.sort(params[:sort], params[:type]).page(params[:page]).per(2)
                   end
     @count = @candidates.count
     respond_to do |format|

@@ -31,12 +31,12 @@ class Candidate < ApplicationRecord
   end
   # TODO: change name to a short name
   # FIXME: Add a space before and after {}
-  def self.sort(page, sort_field, sort_type)
-    #can = Candidate.order(:registration_number).limit(RECORDS_PER_PAGE).offset(RECORDS_PER_PAGE * page)
+
+  def self.sort(sort_field, sort_type)
     if sort_type == 'ASC'
-      Candidate.order(sort_field.to_sym).limit(2).offset(2 * page)
+      Candidate.order(sort_field.to_sym)
     else
-      Candidate.order(sort_field.to_sym).reverse_order.limit(2).offset(2 * page)
+      Candidate.order(sort_field.to_sym).reverse_order
     end
   end
 
