@@ -33,7 +33,8 @@ $(document).ready(function() {
           <tr>
             <td>
               <div class="form-group">
-                <%= select_tag :source_of_registration,options_for_select(["R","KH"]),include_blank:"Source of registration",class: "form-control" %>
+                <%= select_tag :source_of_registration,options_for_select(["R","KH"]),
+                include_blank:"Source of registration",class: "form-control" %>
               </div>
             </td>
             <td>
@@ -43,7 +44,8 @@ $(document).ready(function() {
             </td>
             <td>
               <div class="form-group">
-                <input type="text" name="date_of_registration" id="date_of_registration" value="" class="form-control" placeholder="Range of date of registration">
+                <input type="text" name="date_of_registration" id="date_of_registration"
+                 value="" class="form-control" placeholder="Range of date of registration">
               </div>
             </td>
           </tr>
@@ -60,19 +62,22 @@ $(document).ready(function() {
             </td>
             <td>
               <div class="form-group">
-                <%= states_select %>
+                <%=  select_tag :state,options_for_select(STATES),
+                include_blank:"State",class: "form-control" %>
               </div>
             </td>
           </tr>
           <tr>
             <td>
               <div class="form-group">
-                <%= status_select %>
+                <%= select_tag :status,options_for_select(STATUS),
+                include_blank:"Status",class: "form-control" %>
               </div>
             </td>
 	          <td>
               <div class="form-group">
-                <input type="text" name="date_of_closure" id="date_of_closure" value="" class="form-control" placeholder="Range of date of closure">
+                <input type="text" name="date_of_closure" id="date_of_closure" value=""
+                class="form-control" placeholder="Range of date of closure">
               </div>
             </td>
             <td>
