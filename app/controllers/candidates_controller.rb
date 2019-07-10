@@ -103,7 +103,4 @@ class CandidatesController < ApplicationController
                   :state, :status, :custom_day, :query, :format, :type)
   end
 
-  def set_page
-    @page = params[:page].to_i
-  end
 end

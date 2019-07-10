@@ -10,86 +10,85 @@
           <%=@candidate.id %>
         </td>
         <td>
-          <%=label_tag "Source of Registration" %> 
+          <%=label_tag "Source of Registration" %>
           <%=@candidate.source_of_registration %>
         </td>
         <td>
-          <%=label_tag "Zone" %> 
+          <%=label_tag "Zone" %>
           <%=@candidate.zone%>
         </td>
         <td>
-          <%=label_tag "Date of registration" %> 
+          <%=label_tag "Date of registration" %>
           <%=@candidate.date_of_registration.strftime('%e %B %Y') %>
         </td>
       </tr>
       <tr>
         <td>
-          <%=label_tag "Registration number" %> 
+          <%=label_tag "Registration number" %>
           <%=@candidate.registration_number %>
         </td>
         <td>
-          <%=label_tag "Name" %> 
+          <%=label_tag "Name" %>
           <%=@candidate.name%>
         </td>
         <td>
-          <%=label_tag "Gender" %> 
+          <%=label_tag "Gender" %>
           <%=@candidate.gender %>
         </td>
         <td>
-          <%=label_tag "Age" %> 
+          <%=label_tag "Age" %>
           <%=@candidate.age %>
         </td>
       </tr>
       <tr>
         <td>
-          <%=label_tag "Address" %> 
+          <%=label_tag "Address" %>
           <%=@candidate.address %>
         </td>
         <td>
-          <%=label_tag "branch" %> 
+          <%=label_tag "Branch" %>
           <%=@candidate.branch %>
         </td>
         <td>
-          <%=label_tag "Email" %> 
+          <%=label_tag "Email" %>
           <%=@candidate.email %>
         </td>
         <td>
-          <%=label_tag "Contact number" %> 
+          <%=label_tag "Contact number" %>
           <%=@candidate.contact_number %>
         </td>
       </tr>
       <tr>
         <td>
-          <%=label_tag "State" %> 
+          <%=label_tag "State" %>
           <%=@candidate.state%>
         </td>
         <td>
-          <%=label_tag "Qualification" %> 
+          <%=label_tag "Qualification" %>
           <%=@candidate.qualification%>
         </td>
         <td>
-          <%=label_tag "Specialization" %> 
+          <%=label_tag "Specialization" %>
           <%=@candidate.specialization%>
         </td>
         <td>
-          <%=label_tag "Experience" %> 
+          <%=label_tag "Experience" %>
           <%=@candidate.experience %>
         </td>
       </tr>
       <tr>
         <td>
-          <%=label_tag "Remarks" %> 
+          <%=label_tag "Remarks" %>
           <%=@candidate.remarks %>
         </td>
         <td>
-          <%=label_tag "Date of closure" %> 
+          <%=label_tag "Date of closure" %>
           <%begin%>
           <%=@candidate.date_of_closure.strftime('%e %B %Y') %>
           <%rescue%><%end%>
-          
         </td>
         <td>
-          <%=label_tag "Status" %> 
+          <%=label_tag "Status" %>
           <%=@candidate.status %>
         </td>
         <td>
