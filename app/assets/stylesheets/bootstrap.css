@@ -4379,7 +4379,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 20px 0;
+  margin: 10px 0;
   border-radius: 4px;
 }
 .pagination > li {
@@ -4425,8 +4425,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   z-index: 2;
   color: #fff;
   cursor: default;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #0BA9F9;
+  border-color: #0BA9F9;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,

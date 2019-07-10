@@ -3,7 +3,7 @@
 # Candidate Controller
 class CandidatesController < ApplicationController
   before_action :set_candidate, only: %i[show edit update destroy]
-  RECORDS_PER_PAGE = 2
+  RECORDS_PER_PAGE = ApplicationHelper::RECORDS_PER_PAGE
   # TODO: move to application controller
   # TODO: this should be a constant in model
   # TODO: know difference between symbol and string and replace
@@ -11,10 +11,9 @@ class CandidatesController < ApplicationController
   # TODO: Move business logic to model
   # TODO: know about all the callbacks
   def index
-    @page = (params[:page] || 0).to_i
-    #@can = Candidate.order(:registration_number).limit(RECORDS_PER_PAGE).offset(RECORDS_PER_PAGE * @page)
+    #@page = (params[:page] || 0).to_i
     @candidates = if params[:sort].nil?
-                    Candidate.order(:registration_number).limit(RECORDS_PER_PAGE).offset(RECORDS_PER_PAGE * @page)
+                    Candidate.page(params[:page]).per(2)
                   else
                     Candidate.sort(@page, params[:sort], params[:type])
                   end
@@ -32,12 +31,12 @@ class CandidatesController < ApplicationController
   def filter_result
     if params[:sort].nil?
       @filter_query = filter_params.delete_if { |_key, value| value.blank? }.to_s
-      @candidates = Candidate.filter_records(filter_params)
+      @candidates = Candidate.filter_records(filter_params).page(params[:page]).per(2)
     else
       @filter_query = params[:query]
       @candidates = Candidate.filter_records(
         eval(params[:query]), params[:sort], params[:type]
-      )
+      ).page(params[:page]).per(2)
     end
     respond_to do |format|
       format.html { render :index }

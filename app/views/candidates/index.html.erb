@@ -67,12 +67,7 @@ function toggleFilter(){
     <%else%>
     <%= link_to 'Download As Filtered Excelsheet',filter_result_path(format: :xlsx, sort:"registration_number", type:"ASC", query: @filter_query),class:"btn btn-primary",style:"margin:10px;" %>
     <%end%>
-    <%if @count>=2%>
-    <%= link_to "Next", candidates_path(page: @page + 1, sort: params[:sort], type: params[:type],query: @filter_query),class:"btn btn-primary ",style:"margin:10px;float:right"%>
-    <%end%>
-    <%if !params[:page].nil? && @page>0%>
-    <%= link_to "Previous", candidates_path(page: @page -1, sort: params[:sort], type: params[:type],query: @filter_query),class:"btn btn-primary ",style:"margin:10px;float:right"%>
-    <%end%>
+    <span style="float:right;padding-right:10px;height:0px;"><%= paginate @candidates%></span>
   </div>
 </body>
 <style>

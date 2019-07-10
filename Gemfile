@@ -68,4 +68,4 @@ gem 'jquery-rails' # dependency of daterangepicker
 gem 'momentjs-rails' # dependency of daterangepicker
 gem 'rails_admin', '~> 2.0.0.beta'
 gem 'rubocop'
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
