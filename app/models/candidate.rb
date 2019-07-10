@@ -2,6 +2,7 @@
 
 # This shiny device polishes bared foos
 class Candidate < ApplicationRecord
+  RECORDS_PER_PAGE = 2
   validates :source_of_registration, inclusion: {
     in: %w[R KH], message: 'Must be selected'
   }
@@ -25,11 +26,12 @@ class Candidate < ApplicationRecord
 
   # TODO: change name to a short name
   # FIXME: Add a space before and after {}
-  def self.sort(sort_field, sort_type)
+  def self.sort(page, sort_field, sort_type)
+    #can = Candidate.order(:registration_number).limit(RECORDS_PER_PAGE).offset(RECORDS_PER_PAGE * page)
     if sort_type == 'ASC'
-      Candidate.all.order(sort_field.to_sym)
+      Candidate.order(sort_field.to_sym).limit(2).offset(2 * page)
     else
-      Candidate.all.order(sort_field.to_sym).reverse_order
+      Candidate.order(sort_field.to_sym).reverse_order.limit(2).offset(2 * page)
     end
   end
 

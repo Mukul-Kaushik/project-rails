@@ -3,6 +3,7 @@
 # Candidate Controller
 class CandidatesController < ApplicationController
   before_action :set_candidate, only: %i[show edit update destroy]
+  RECORDS_PER_PAGE = 2
   # TODO: move to application controller
   # TODO: this should be a constant in model
   # TODO: know difference between symbol and string and replace
@@ -10,11 +11,14 @@ class CandidatesController < ApplicationController
   # TODO: Move business logic to model
   # TODO: know about all the callbacks
   def index
+    @page = (params[:page] || 0).to_i
+    #@can = Candidate.order(:registration_number).limit(RECORDS_PER_PAGE).offset(RECORDS_PER_PAGE * @page)
     @candidates = if params[:sort].nil?
-                    Candidate.all
+                    Candidate.order(:registration_number).limit(RECORDS_PER_PAGE).offset(RECORDS_PER_PAGE * @page)
                   else
-                    Candidate.sort(params[:sort], params[:type])
+                    Candidate.sort(@page, params[:sort], params[:type])
                   end
+    @count = @candidates.count
     respond_to do |format|
       format.html
       format.xlsx { response.headers['Content-Disposition'] = 'attachment;filename="candidates.xlsx"' }
@@ -97,5 +101,9 @@ class CandidatesController < ApplicationController
     params.permit(:date_of_registration, :date_of_closure,
                   :source_of_registration, :zone, :name, :branch,
                   :state, :status, :custom_day, :query, :format, :type)
+  end
+
+  def set_page
+    @page = params[:page].to_i
   end
 end
