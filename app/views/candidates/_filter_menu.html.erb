@@ -11,10 +11,10 @@ $(document).ready(function() {
     opens: 'left'
   });
  $('input[name="date_of_registration"]').on('apply.daterangepicker', function(ev, picker) {
-      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
   });
  $('input[name="date_of_closure"]').on('apply.daterangepicker', function(ev, picker) {
-      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
   });
  $('input[name="date_of_registration"]').on('cancel.daterangepicker', function(ev, picker) {
       $(this).val('');
