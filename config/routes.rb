@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :candidates
   devise_for :users
-  root 'candidates#index'
+  root 'candidates#dashboard'
   # root 'candidate_details#dashboard' #root controller candidate details
   # get 'Filter', to: "filter_page#filter_menu", as:"filter"
   match "/Filter_Result", to: "candidates#filter_result", as: "filter_result", via: [:post, :get]

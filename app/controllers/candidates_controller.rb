@@ -10,38 +10,41 @@
 # Candidate Controller
 class CandidatesController < ApplicationController
   before_action :set_candidate, only: %i[show edit update destroy]
-  include Constant
+  include FilterHelper
   def index
-    @candidates = if params[:sort].nil?
-                    Candidate.page(params[:page]).per(2)
-                  else
-                    Candidate.sort(params[:sort], params[:type]).page(params[:page]).per(2)
-                  end
+    @candidates = Candidate.sort(params[:sort],
+                                 params[:type]).page(params[:page]).per(2)
     respond_to do |format|
       format.html
       format.xlsx do
+        @download_data = Candidate.sort(params[:sort], params[:type])
         response.headers['Content-Disposition'] = 'attachment;filename="candidates.xlsx"'
       end
     end
   end
 
   def dashboard
-    redirect to candidate_path
+    # redirect to candidate_path
+    @label = Candidate.count_status.keys
   end
 
   def filter_result
-    if params[:sort].nil?
-      @filter_query = filter_params.to_s
-      @candidates = Candidate.filter_records(parse(filter_params)).page(params[:page]).per(2)
-    else
-      @filter_query = params[:query]
-      @candidates = Candidate.filter_records(
-        parse(params[:query]), params[:sort], params[:type]
-      ).page(params[:page]).per(2)
-    end
+    @filter_query = if params[:sort].nil?
+                      filter_params.to_s
+                    else
+                      params[:query]
+                    end
+    @candidates = Candidate.filter_records(
+      parse(@filter_query), params[:sort], params[:type]
+    ).page(params[:page]).per(2)
     respond_to do |format|
       format.html { render :index }
-      format.xlsx { render :index }
+      format.xlsx do
+        @download_data = Candidate.filter_records(
+          parse(@filter_query), params[:sort], params[:type]
+        )
+        render :index
+      end
     end
   end
 
@@ -86,24 +89,24 @@ class CandidatesController < ApplicationController
   end
 
   def candidate_params
-    params.require(:candidates).permit(:date_of_registration,
-                                       :date_of_closure,
-                                       :address,
-                                       :age,
-                                       :branch,
-                                       :contact_number,
-                                       :email,
-                                       :experience,
-                                       :gender,
-                                       :name,
-                                       :qualification,
-                                       :registration_number,
-                                       :remarks,
-                                       :specialization,
-                                       :source_of_registration,
-                                       :state,
-                                       :status,
-                                       :zone)
+    params.require(:candidate).permit(:date_of_registration,
+                                      :date_of_closure,
+                                      :address,
+                                      :age,
+                                      :branch,
+                                      :contact_number,
+                                      :email,
+                                      :experience,
+                                      :gender,
+                                      :name,
+                                      :qualification,
+                                      :registration_number,
+                                      :remarks,
+                                      :specialization,
+                                      :source_of_registration,
+                                      :state,
+                                      :status,
+                                      :zone)
   end
 
   def filter_params

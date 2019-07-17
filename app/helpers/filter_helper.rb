@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Controller constants
-module Constant
+module FilterHelper
   CUSTOM_DAY_SELECT = { 'Greater than 365 days' => (Date.today - 20.year)..(Date.today - 365),
                         'Between 180 to 365 days' => (Date.today - 365)..(Date.today - 180),
                         'Between 60 to 180 days' => (Date.today - 180)..(Date.today - 60),

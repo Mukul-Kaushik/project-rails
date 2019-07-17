@@ -1,0 +1,27 @@
+<div class="text-center"><h2 id="dash-header">Dashboard</h2></div>
+<div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script>
+var label = JSON.parse('<%=@label%>'.replace(/&quot;/g, '"'))
+var data = [{
+  values: <%=Candidate.count_status.values%>,
+  labels: label,
+  type: 'pie'
+}];
+
+Plotly.newPlot('myDiv', data, {title: 'Total Candidate Status',height: 400, width: 500,paper_bgcolor: "rgba(204, 218, 255,1)"}, {staticPlot: true});
+</script>
+<style>
+.svg-container{
+    background: blue;
+}
+#dash-header{
+    font-size: 50px;
+    padding-top:15px;
+}
+.text-center{
+    padding-top:52px;
+}
+text.gtitle{
+    font-size: 100px;
+}
+</style>
