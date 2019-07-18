@@ -19,10 +19,18 @@ class Candidate < ApplicationRecord
     if !date_of_closure.blank? && date_of_registration <= date_of_closure
   end
 
-  def self.update_source(src_reg, id)
-    candidate = Candidate.find(id)
-    candidate.update(registration_number: 'NZ/' + src_reg + '/' + id.to_s)
-    candidate.save
+  def update_source
+    update(registration_number: 'NZ/' + source_of_registration + '/' + id.to_s)
+  end
+
+  def self.get_status(date)
+    status = Candidate.where(status_changed: date..date.end_of_month).
+    group(:status).count
+    src_reg = Candidate.where({status_changed: date..date.end_of_month,
+      status: 'Joined'}).group(:source_of_registration).count
+    p status.merge(src_reg)
+    status.merge(src_reg)
+    
   end
   # TODO: change name to a short name
   # FIXME: Add a space before and after {}
