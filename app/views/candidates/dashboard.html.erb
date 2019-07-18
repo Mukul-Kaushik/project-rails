@@ -1,15 +1,43 @@
 <div class="text-center"><h2 id="dash-header">Dashboard</h2></div>
-<div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
-<script>
-var label = JSON.parse('<%=@label%>'.replace(/&quot;/g, '"'))
-var data = [{
-  values: <%=Candidate.count_status.values%>,
-  labels: label,
-  type: 'pie'
-}];
-
-Plotly.newPlot('myDiv', data, {title: 'Total Candidate Status',height: 400, width: 500,paper_bgcolor: "rgba(204, 218, 255,1)"}, {staticPlot: true});
-</script>
+<div class="table-responsive">
+<table>
+    <tbody>
+    <%(1..4).step(2) do |i|%>
+        <tr>
+            <td>
+                <div id='myDiv<%=i%>' ></div>
+                <%date=Date.today.beginning_of_month.months_ago(i)%>
+                <% data = Candidate.get_status(date)%>
+                <script>
+                    var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
+                    var data = [{
+                    values: <%=data.values%>,   
+                    labels: label,
+                    type: 'pie'
+                    }];
+                    Plotly.newPlot('myDiv<%=i%>', data, {title:' <%=" #{date.strftime('%B %Y')}"%>', paper_bgcolor: "rgba(204, 218, 255,1)"}, {staticPlot: true});
+                </script>
+            </td>
+            <td>
+                <div id='myDiv<%=i+1%>' ></div>
+                <%date=date.months_ago(1)%>
+                <% data = Candidate.get_status(date)%>
+                <script>
+                    var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
+                    var data = [{
+                    values: <%=data.values%>,
+                    labels: label,
+                    type: 'pie'
+                    }];
+                    Plotly.newPlot('myDiv<%=i+1%>', data, {title: '<%=" #{date.strftime('%B %Y')}"%>', paper_bgcolor: "rgba(204, 218, 255,1)"}, {staticPlot: true});
+                </script>
+            </td>
+        </tr>
+        
+    <%end%>
+    </tbody>
+</table>
+</div>
 <style>
 .svg-container{
     background: blue;
@@ -24,4 +52,5 @@ Plotly.newPlot('myDiv', data, {title: 'Total Candidate Status',height: 400, widt
 text.gtitle{
     font-size: 100px;
 }
+
 </style>
