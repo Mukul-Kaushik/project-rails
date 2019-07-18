@@ -25,7 +25,6 @@ class CandidatesController < ApplicationController
 
   def dashboard
     # redirect to candidate_path
-    @label = Candidate.count_status.keys
   end
 
   def filter_result
@@ -56,7 +55,8 @@ class CandidatesController < ApplicationController
     @candidate = Candidate.new(candidate_params)
     respond_to do |format|
       if @candidate.save
-        Candidate.update_source(@candidate.source_of_registration, @candidate.id)
+        @candidate.update(status_changed: Date.today)
+        @candidate.update_source
         format.html { redirect_to @candidate }
       else
         format.html { render :new }
@@ -67,7 +67,10 @@ class CandidatesController < ApplicationController
   def update
     respond_to do |format|
       if @candidate.update(candidate_params)
-        Candidate.update_source(@candidate.source_of_registration, @candidate.id)
+        if @candidate.saved_change_to_status?
+          @candidate.update(status_changed: Date.today)
+        end
+        @candidate.update_source
         format.html { redirect_to @candidate }
       else
         format.html { render :edit }
