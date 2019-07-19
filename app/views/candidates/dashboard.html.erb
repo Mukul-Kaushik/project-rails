@@ -1,43 +1,94 @@
 <div class="text-center"><h2 id="dash-header">Dashboard</h2></div>
-<div class="table-responsive">
-<table>
-    <tbody>
-    <%(1..4).step(2) do |i|%>
-        <tr>
-            <td>
-                <div id='myDiv<%=i%>' ></div>
+<div id='total'></div>
+<script>
+    <%data = Candidate.count_status.merge(Candidate.count_source_of_registration)%>
+    var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
+    var data = [{
+        values: <%=data.values%>,
+        labels: label,
+        type: 'pie'
+    }];
+    var layout = {
+        title: "Total candidate status",
+        paper_bgcolor: "rgba(204, 218, 255,1)"
+    }
+    Plotly.newPlot('total', data, layout, {staticPlot: true});
+</script>
+<br>
+<%(0..11).step(2) do |i|%>
+    <div class="row">
+        <div class="col-sm-6">
+            <div id='myDiv<%=i%>' ></div>
                 <%date=Date.today.beginning_of_month.months_ago(i)%>
                 <% data = Candidate.get_status(date)%>
                 <script>
                     var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
                     var data = [{
-                    values: <%=data.values%>,   
-                    labels: label,
-                    type: 'pie'
+                        values: <%=data.values%>,   
+                        labels: label,
+                        type: 'pie'
                     }];
-                    Plotly.newPlot('myDiv<%=i%>', data, {title:' <%=" #{date.strftime('%B %Y')}"%>', paper_bgcolor: "rgba(204, 218, 255,1)"}, {staticPlot: true});
+                    var layout = {
+                        title:' <%=" #{date.strftime('%B %Y')}"%>',
+                        paper_bgcolor: "rgba(204, 218, 255,1)",
+                        <%if data.empty?%>
+                            annotations: [
+                                {
+                                    text: ' <%="No status created or updated"%>',
+                                    font: {
+                                    size: 20,
+                                    },
+                                    showarrow: false,
+                                    align: 'center',
+                                    x: 0.8,  //position in x domain
+                                    y: 0.5, //position in y domain
+                                    xref: 'paper',
+                                    yref: 'paper',
+                                }
+                            ]
+                        <%end%>
+                    }
+                    Plotly.newPlot('myDiv<%=i%>', data, layout, {staticPlot: true});
                 </script>
-            </td>
-            <td>
-                <div id='myDiv<%=i+1%>' ></div>
-                <%date=date.months_ago(1)%>
+            </div>
+        <div class="col-sm-6">
+            <div id='myDiv<%=i+1%>' ></div>
+                <%date=Date.today.beginning_of_month.months_ago(i+1)%>
                 <% data = Candidate.get_status(date)%>
                 <script>
                     var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
                     var data = [{
-                    values: <%=data.values%>,
-                    labels: label,
-                    type: 'pie'
+                        values: <%=data.values%>,   
+                        labels: label,
+                        type: 'pie'
                     }];
-                    Plotly.newPlot('myDiv<%=i+1%>', data, {title: '<%=" #{date.strftime('%B %Y')}"%>', paper_bgcolor: "rgba(204, 218, 255,1)"}, {staticPlot: true});
+                    var layout = {
+                        title:' <%=" #{date.strftime('%B %Y')}"%>',
+                        paper_bgcolor: "rgba(204, 218, 255,1)",
+                        <%if data.empty?%>
+                            annotations: [
+                                {
+                                    text: ' <%="No status created or updated"%>',
+                                    font: {
+                                    size: 20,
+                                    },
+                                    showarrow: false,
+                                    align: 'center',
+                                    x: 0.8,  //position in x domain
+                                    y: 0.5, //position in y domain
+                                    xref: 'paper',
+                                    yref: 'paper',
+                                }
+                            ]
+                        <%end%>
+                    }
+                    Plotly.newPlot('myDiv<%=i+1%>', data, layout, {staticPlot: true});
                 </script>
-            </td>
-        </tr>
-        
-    <%end%>
-    </tbody>
-</table>
-</div>
+                </div>
+            </div>
+        </div>
+    <br>
+<%end%>
 <style>
 .svg-container{
     background: blue;
