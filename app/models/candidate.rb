@@ -2,6 +2,7 @@
 
 # This shiny device polishes bared foos
 class Candidate < ApplicationRecord
+  has_many :counsellings
   scope :count_status, -> { group(:status).count }
   scope :count_source_of_registration, -> {group(:source_of_registration).count}
   validates :source_of_registration, inclusion: {
