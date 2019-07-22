@@ -43,13 +43,6 @@ ActiveRecord::Schema.define(version: 2019_07_22_092000) do
     t.index ["registration_number"], name: "index_candidates_on_registration_number", unique: true
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.integer "demand"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "counsellings", force: :cascade do |t|
     t.text "note"
     t.date "counselling_date"
@@ -57,15 +50,6 @@ ActiveRecord::Schema.define(version: 2019_07_22_092000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["candidate_id"], name: "index_counsellings_on_candidate_id"
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.bigint "category_id"
-    t.string "name"
-    t.integer "batch"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,5 +65,4 @@ ActiveRecord::Schema.define(version: 2019_07_22_092000) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "products", "categories"
 end
