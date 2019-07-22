@@ -71,6 +71,9 @@
             <div class="form-group">
               <%= form.select :status, STATUS,{include_blank: "Select Status"},{:class=> "form-control"}%>
             </div>
+            <div class="form-group">
+              <%= form.text_field :mobility,class: "form-control",placeholder: "Mobility" %>
+            </div>
             <div class="actions text-center">
               <%= form.submit class:"btn btn-theme"%>
             </div>
