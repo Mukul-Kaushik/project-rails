@@ -1,10 +1,10 @@
 <div class="text-center"><h2 id="dash-header">Dashboard</h2></div>
 <div id='total'></div>
 <script>
-    <%data = Candidate.count_status.merge(Candidate.count_source_of_registration)%>
-    var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
+    <%status_data = Candidate.count_status.merge(Candidate.count_source_of_registration)%>
+    var label = JSON.parse('<%=status_data.keys%>'.replace(/&quot;/g, '"'))
     var data = [{
-        values: <%=data.values%>,
+        values: <%=status_data.values%>,
         labels: label,
         type: 'pie'
     }];
@@ -20,11 +20,11 @@
         <div class="col-sm-6">
             <div id='myDiv<%=i%>' ></div>
                 <%date=Date.today.beginning_of_month.months_ago(i)%>
-                <% data = Candidate.get_status(date)%>
+                <% status_data = Candidate.get_status(date)%>
                 <script>
-                    var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
+                    var label = JSON.parse('<%=status_data.keys%>'.replace(/&quot;/g, '"'))
                     var data = [{
-                        values: <%=data.values%>,   
+                        values: <%=status_data.values%>,   
                         labels: label,
                         type: 'pie'
                     }];
@@ -54,11 +54,11 @@
         <div class="col-sm-6">
             <div id='myDiv<%=i+1%>' ></div>
                 <%date=Date.today.beginning_of_month.months_ago(i+1)%>
-                <% data = Candidate.get_status(date)%>
+                <% status_data = Candidate.get_status(date)%>
                 <script>
-                    var label = JSON.parse('<%=data.keys%>'.replace(/&quot;/g, '"'))
+                    var label = JSON.parse('<%=status_data.keys%>'.replace(/&quot;/g, '"'))
                     var data = [{
-                        values: <%=data.values%>,   
+                        values: <%=status_data.values%>,   
                         labels: label,
                         type: 'pie'
                     }];
