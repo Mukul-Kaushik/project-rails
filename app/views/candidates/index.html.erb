@@ -47,9 +47,10 @@ function toggleFilter(){
             <%end%>
             <td colspan="2"><%= candidate.remarks %></td>
             <td colspan="2"><%= candidate.status %></td>
-            <td><%= link_to 'Read', candidate,class:"btn btn-primary" %></td>
+            <td colspan="2"><%= link_to 'Read', candidate,class:"btn btn-primary" %></td>
             <td><%= link_to 'Update', edit_candidate_path(candidate),class:"btn btn-info" %></td>
             <td><%= link_to 'Delete', candidate, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-warning" %></td>
+            <td colspan="2"><%= link_to 'Show counselling', counsellings_path(candidate_id: candidate.id),class:"btn btn-primary" %></td>
           </tr>
         <% end %>
       </tbody>

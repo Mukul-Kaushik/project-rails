@@ -1,0 +1,40 @@
+<script>
+$('#counselling_create').hide();
+function toggleForm(){
+  $("#counselling_create").slideToggle();
+}
+</script>
+<div class="container" style="padding-top:70px">
+  <div class="contractForm">
+    <div class="card">
+      <div class="row">
+      <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+        <div class="text-center">
+            <h2> Counselling</h2>
+        </div>
+        <% @counselling.each do |counselling_data| %>
+            <div class="form-group">
+                <p><%= counselling_data.counselling_date.strftime("%e %B %Y")%>
+                <textarea class="form-control" ><%= counselling_data.note%></textarea>
+            </div>
+        <%end%>
+
+        <div id='counselling_create' class="form-group">
+            <%= form_tag save_counselling_path do |form| %>
+                <%= label_tag 'Counselling date'%>
+                <%= date_field_tag :counselling_date, '', {class: 'form-control', style: 'margin-bottom: 10px;'} %>
+                <%= text_area_tag :note, '', {class: 'form-control', placeholder: 'Note'} %>
+                <%= hidden_field_tag 'candidate_id', params[:candidate_id]%>
+                <%= submit_tag "Save counselling", class: "btn btn-primary"%> 
+            <% end %>
+        </div>
+        <div class="text-center" style="margin-bottom:10px;">
+            <%= link_to 'Back', candidates_path, class: 'btn btn-primary'%>
+            <a class="btn btn-primary"  onClick="toggleForm()">Create Counseling</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

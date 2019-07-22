@@ -13,7 +13,7 @@ class CandidatesController < ApplicationController
   include FilterHelper
   def index
     @candidates = Candidate.sort(params[:sort],
-                                 params[:type]).page(params[:page]).per(2)
+                                 params[:type]).page(params[:page]).per(15)
     respond_to do |format|
       format.html
       format.xlsx do
@@ -35,7 +35,7 @@ class CandidatesController < ApplicationController
                     end
     @candidates = Candidate.filter_records(
       parse(@filter_query), params[:sort], params[:type]
-    ).page(params[:page]).per(2)
+    ).page(params[:page]).per(15)
     respond_to do |format|
       format.html { render :index }
       format.xlsx do
@@ -45,6 +45,17 @@ class CandidatesController < ApplicationController
         render :index
       end
     end
+  end
+
+  def counselling_page
+    @counselling = Candidate.find(params[:candidate_id]).counsellings
+  end
+
+  def save_counselling
+    p params[:candidate_id]
+    Counselling.create(params[:candidate_id],
+                       params[:counselling_date], params[:note])
+    redirect_to counsellings_path(candidate_id: params[:candidate_id])
   end
 
   def new
