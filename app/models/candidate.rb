@@ -27,11 +27,9 @@ class Candidate < ApplicationRecord
   def self.get_status(date)
     status = Candidate.where(status_changed: date..date.end_of_month).
     group(:status).count
-    src_reg = Candidate.where({status_changed: date..date.end_of_month,
-      status: 'Joined'}).group(:source_of_registration).count
-    p status.merge(src_reg)
+    src_reg = Candidate.where(status_changed: date..date.end_of_month,
+      status: 'Joined').group(:source_of_registration).count
     status.merge(src_reg)
-    
   end
   # TODO: change name to a short name
   # FIXME: Add a space before and after {}
