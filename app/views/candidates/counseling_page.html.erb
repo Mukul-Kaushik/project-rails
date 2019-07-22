@@ -1,12 +1,32 @@
-<div class="container" style="padding-top:20px">
+<script>
+function toggleForm(){
+  $("#filter").slideToggle();
+}
+</script>
+<div class="container" style="padding-top:70px">
   <div class="contractForm">
     <div class-"card">
       <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-            <div class="text-center">
-                <h2> Edit Candidate Details</h2>
+        <div class="text-center">
+            <h2> Counseling</h2>
+        </div>
+        <% @counseling.each do |counseling_data| %>
+            <div>
+                <p><%= counseling_data.date%>
+                <textarea><%= couseling_data.note%></textarea>
             </div>
+        <%end%>
+
+        <div id='counseling_create'>
+            <% form_with model: couseling do |counseling_data| %>
+                <%counseling_data.date_select :date_of_couseling %>
+                <% couseling_data.textarea :counseling_notes %>
+                <% counseling_data.submit %>
+            <% end %>
+        </div>
+        <div class="text-center">
+            <%= link_to 'Back', candidates_path%>
+            <a class="btn btn-primary" id="counsel" style="margin:10px;" onClick="toggleForm()">Create Counseling</a>
         </div>
       </div>
     </div>
